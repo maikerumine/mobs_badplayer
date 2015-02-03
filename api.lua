@@ -204,13 +204,13 @@ local z = math.cos(yaw) * 2
  if minetest.get_item_group(minetest.get_node(self.object:getpos()).name, "water") ~= 0 then
  self.object:setacceleration({x = x, y = 1.5, z = z})
  else
- self.object:setacceleration({x = x, y = -10, z = z}) -- 14.5
+ self.object:setacceleration({x = x, y = -14, z = z}) -- 14.5
  end
  else
  if minetest.get_item_group(minetest.get_node(self.object:getpos()).name, "water") ~= 0 then
  self.object:setacceleration({x = 0, y = 1.5, z = 0})
  else
- self.object:setacceleration({x = 0, y = -10, z = 0}) -- 14.5
+ self.object:setacceleration({x = 0, y = -14, z = 0}) -- 14.5
  end
  end
 -- fall damage
