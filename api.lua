@@ -288,7 +288,7 @@ elseif self.state ~= "attack" then
 do_env_damage(self)
 end
 -- FIND SOMEONE TO ATTACK
-if ( self.type == "monster" or self.type == "npc" ) and minetest.setting_getbool("enable_damage") and self.state ~= "attack" then
+if ( self.type == "badp" or self.type == "npc" ) and minetest.setting_getbool("enable_damage") and self.state ~= "attack" then
 local s = self.object:getpos()
 local inradius = minetest.get_objects_inside_radius(s,self.view_range)
 local player = nil
@@ -320,23 +320,23 @@ end
 end
 end
 end
--- NPC FIND A MONSTER TO ATTACK
--- if self.type == "npc" and self.attacks_monsters and self.state ~= "attack" then
--- local s = self.object:getpos()
--- local inradius = minetest.get_objects_inside_radius(s,self.view_range)
--- for _, oir in pairs(inradius) do
--- local obj = oir:get_luaentity()
--- if obj then
--- if obj.type == "monster" or obj.type == "barbarian" then
+-- BAD PLAYER FIND A MONSTER TO ATTACK
+ if self.type == "badp" and self.attacks_monsters and self.state ~= "attack" then
+ local s = self.object:getpos()
+ local inradius = minetest.get_objects_inside_radius(s,self.view_range)
+ for _, oir in pairs(inradius) do
+ local obj = oir:get_luaentity()
+ if obj then
+ if obj.type == "monster" or obj.type == "barbarian" then
 -- -- attack monster
--- local p = obj.object:getpos()
--- local dist = ((p.x-s.x)^2 + (p.y-s.y)^2 + (p.z-s.z)^2)^0.5
--- self.do_attack(self,obj.object,dist)
--- break
--- end
--- end
--- end
--- end
+ local p = obj.object:getpos()
+ local dist = ((p.x-s.x)^2 + (p.y-s.y)^2 + (p.z-s.z)^2)^0.5
+ self.do_attack(self,obj.object,dist)
+ break
+ end
+ end
+ end
+ end
 if self.follow ~= "" and not self.following then
 for _,player in pairs(minetest.get_connected_players()) do
 local s = self.object:getpos()
