@@ -310,7 +310,7 @@ function bp:register_mob(name, def)
 			end
 			
 			-- FIND SOMEONE TO ATTACK
-			if ( self.type == "monster" or self.type == "barbarian" ) and minetest.setting_getbool("enable_damage") and self.state ~= "attack" then
+			if ( self.type == "monster" or self.type == "npc" ) and minetest.setting_getbool("enable_damage") and self.state ~= "attack" then
 				local s = self.object:getpos()
 				local inradius = minetest.get_objects_inside_radius(s,self.view_range)
 				local player = nil
@@ -327,7 +327,7 @@ function bp:register_mob(name, def)
 						end
 					end
 					
-					if type == "player" or type == "npc" then
+					if type == "player" or type == "monster" then
 						local s = self.object:getpos()
 						local p = player:getpos()
 						local sp = s
