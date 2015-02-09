@@ -181,14 +181,14 @@ self.object:remove()
 return
 end
 end
--- drop egg
+--[[ drop egg
 if self.animaltype == "clucky" then
 if math.random(1, 1500) < 2
 and minetest.get_node(self.object:getpos()).name == "air"
 and self.state == "stand" then
 minetest.set_node(self.object:getpos(), {name="mobs:egg"})
 end
-end
+end]]
 if self.object:getvelocity().y > 0.1 then
 local yaw = self.object:getyaw()
 if self.drawtype == "side" then
@@ -203,7 +203,6 @@ local z = math.cos(yaw) * 2
 -- Mobs float in water now, to revert uncomment previous 4 lines and remove following block of 12
  if minetest.get_item_group(minetest.get_node(self.object:getpos()).name, "water") ~= 0 then
  self.object:setacceleration({x = x, y = 1.5, z = z})
- else
  self.object:setacceleration({x = x, y = -10, z = z}) -- 14.5
  end
  else
@@ -288,7 +287,7 @@ elseif self.state ~= "attack" then
 do_env_damage(self)
 end
 -- FIND SOMEONE TO ATTACK
-if ( self.type == "badp" or self.type == "npc" ) and minetest.setting_getbool("enable_damage") and self.state ~= "attack" then
+if ( self.type == "badp" or self.type == "barbarian" ) and minetest.setting_getbool("enable_damage") and self.state ~= "attack" then
 local s = self.object:getpos()
 local inradius = minetest.get_objects_inside_radius(s,self.view_range)
 local player = nil
@@ -320,14 +319,14 @@ end
 end
 end
 end
--- BAD PLAYER FIND A MONSTER TO ATTACK
+-- BAD PLAYER FIND A MONSTER OR NPC TO ATTACK
  if self.type == "badp" and self.attacks_monsters and self.state ~= "attack" then
  local s = self.object:getpos()
  local inradius = minetest.get_objects_inside_radius(s,self.view_range)
  for _, oir in pairs(inradius) do
  local obj = oir:get_luaentity()
  if obj then
- if obj.type == "monster" or obj.type == "barbarian" then
+ if obj.type == "monster" or obj.type == "npc" then
 -- -- attack monster
  local p = obj.object:getpos()
  local dist = ((p.x-s.x)^2 + (p.y-s.y)^2 + (p.z-s.z)^2)^0.5
@@ -337,6 +336,28 @@ end
  end
  end
  end
+
+-- NPC FIND A MONSTER OR BADPLAYER TO ATTACK
+ if self.type == "npc" and self.attacks_monsters and self.state ~= "attack" then
+ local s = self.object:getpos()
+ local inradius = minetest.get_objects_inside_radius(s,self.view_range)
+ for _, oir in pairs(inradius) do
+ local obj = oir:get_luaentity()
+ if obj then
+ if obj.type == "monster" or obj.type == "badp" then
+-- -- attack monster
+ local p = obj.object:getpos()
+ local dist = ((p.x-s.x)^2 + (p.y-s.y)^2 + (p.z-s.z)^2)^0.5
+ self.do_attack(self,obj.object,dist)
+ break
+ end
+ end
+ end
+ end
+
+
+
+
 if self.follow ~= "" and not self.following then
 for _,player in pairs(minetest.get_connected_players()) do
 local s = self.object:getpos()
@@ -503,6 +524,15 @@ self.attack.player:punch(self.object, 1.0, {
 full_punch_interval=1.0,
 damage_groups = {fleshy=self.damage}
 }, vec)
+
+if math.random(0,3) == 3 and self.attack.player:is_player() then
+								local snum = math.random(1,4)
+								minetest.sound_play("default_hurt"..tostring(snum),{
+									object = self.attack.player,
+								})
+							end
+
+
 if self.attack.player:get_hp() < 1 then
 self.state = "stand"
 self:set_animation("stand")
@@ -722,6 +752,22 @@ end
 end
 end
 ]]--
+--MAKE NPC FIGHT AFTER PUNCHED
+			if self.passive == false then
+				self.do_attack(self,hitter,1)
+				-- alert other NPCs to the attack
+				local inradius = minetest.get_objects_inside_radius(hitter:getpos(),5)
+				for _, oir in pairs(inradius) do
+					local obj = oir:get_luaentity()
+					if obj then
+						if obj.group_attack == true and obj.state ~= "attack" then
+							obj.do_attack(obj,hitter,1)
+						end
+					end
+				end
+			end
+
+
 end,
 })
 end
@@ -836,3 +882,4 @@ end
 -- })
 -- end
 end
+
