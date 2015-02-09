@@ -1,7 +1,7 @@
 dofile(minetest.get_modpath("badplayer").."/api.lua")
 
 bp:register_mob("badplayer:badplayer1", {
-	type = "badp",
+	type = "npc",
 	hp_max = 5,
 	collisionbox = {-0.3, -1.0, -0.3, 0.3, 0.8, 0.3},
 	visual = "mesh",
@@ -162,7 +162,7 @@ bp:register_mob("badplayer:badplayer4", {
 })
 bp:register_spawn("badplayer:badplayer5", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer5", {
-	type = "badp",
+	type = "npc",
 	hp_max = 4,
 	collisionbox = {-0.3, -1.0, -0.3, 0.3, 0.8, 0.3},
 	visual = "mesh",
@@ -198,7 +198,11 @@ bp:register_mob("badplayer:badplayer5", {
 		run_end = 187,
 		punch_start = 189,
 		punch_end = 191,
-	}
+	},
+	attacks_monsters = true,
+	peaceful = true,
+	group_attack = true,
+	step = 1,
 })
 bp:register_spawn("badplayer:badplayer6", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer6", {
@@ -522,7 +526,7 @@ bp:register_mob("badplayer:badplayer13", {
 })
 bp:register_spawn("badplayer:badplayer14", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer14", {
-	type = "badp",
+	type = "npc",
 	hp_max = 5,
 	collisionbox = {-0.3, -1.0, -0.3, 0.3, 0.8, 0.3},
 	visual = "mesh",
@@ -558,7 +562,12 @@ bp:register_mob("badplayer:badplayer14", {
 		run_end = 187,
 		punch_start = 189,
 		punch_end = 191,
-	}
+},
+	attacks_monsters = true,
+	peaceful = true,
+	group_attack = true,
+	step = 1,
+
 })
 bp:register_spawn("badplayer:badplayer15", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer15", {
@@ -642,7 +651,7 @@ bp:register_mob("badplayer:badplayer16", {
 })
 bp:register_spawn("badplayer:badplayer17", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer17", {
-	type = "badp",
+	type = "npc",
 	hp_max = 5,
 	collisionbox = {-0.3, -1.0, -0.3, 0.3, 0.8, 0.3},
 	visual = "mesh",
@@ -678,7 +687,12 @@ bp:register_mob("badplayer:badplayer17", {
 		run_end = 187,
 		punch_start = 189,
 		punch_end = 191,
-	}
+},
+	attacks_monsters = true,
+	peaceful = true,
+	group_attack = true,
+	step = 1,
+
 })
 bp:register_spawn("badplayer:badplayer18", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer18", {
@@ -722,7 +736,7 @@ bp:register_mob("badplayer:badplayer18", {
 })
 bp:register_spawn("badplayer:badplayer19", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer19", {
-	type = "badp",
+	type = "npc",
 	hp_max = 5,
 	collisionbox = {-0.3, -1.0, -0.3, 0.3, 0.8, 0.3},
 	visual = "mesh",
@@ -758,11 +772,16 @@ bp:register_mob("badplayer:badplayer19", {
 		run_end = 187,
 		punch_start = 189,
 		punch_end = 191,
-	}
+},
+	attacks_monsters = true,
+	peaceful = true,
+	group_attack = true,
+	step = 1,
+
 })
 bp:register_spawn("badplayer:badplayer20", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer20", {
-	type = "badp",
+	type = "npc",
 	hp_max = 15,
 	collisionbox = {-0.3, -1.0, -0.3, 0.3, 0.8, 0.3},
 	visual = "mesh",
@@ -798,7 +817,12 @@ bp:register_mob("badplayer:badplayer20", {
 		run_end = 187,
 		punch_start = 189,
 		punch_end = 191,
-	}
+},
+	attacks_monsters = true,
+	peaceful = true,
+	group_attack = true,
+	step = 1,
+
 })
 bp:register_spawn("badplayer:badplayer21", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer21", {
@@ -842,7 +866,7 @@ bp:register_mob("badplayer:badplayer21", {
 })
 bp:register_spawn("badplayer:badplayer22", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer22", {
-	type = "badp",
+	type = "npc",
 	hp_max = 50,
 	collisionbox = {-0.3, -1.0, -0.3, 0.3, 0.8, 0.3},
 	visual = "mesh",
@@ -878,7 +902,12 @@ bp:register_mob("badplayer:badplayer22", {
 		run_end = 187,
 		punch_start = 189,
 		punch_end = 191,
-	}
+},
+	attacks_monsters = true,
+	peaceful = true,
+	group_attack = true,
+	step = 1,
+
 })
 bp:register_spawn("badplayer:badplayer23", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer23", {
