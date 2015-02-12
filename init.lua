@@ -273,7 +273,7 @@ bp:register_mob("badplayer:badplayer5", {
 	group_attack = true,
 	step = 1,
 })
-bp:register_spawn("badplayer:badplayer6", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
+bp:register_spawn("badplayer:badplayer6", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 4, -1, 13000, 1, 31000)
 bp:register_mob("badplayer:badplayer6", {
 	type = "badp",
 	hp_min = 77,
@@ -310,7 +310,7 @@ bp:register_mob("badplayer:badplayer6", {
 	drawtype = "front",
 	water_damage = 0,
 	lava_damage = 5,
-	light_damage = 0,
+	light_damage = 2,
 	on_rightclick = nil,
 	attack_type = "dogfight",
 	animation = {
@@ -326,7 +326,7 @@ bp:register_mob("badplayer:badplayer6", {
 		punch_end = 191,
 	}
 })
-bp:register_spawn("badplayer:badplayer7", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
+bp:register_spawn("badplayer:badplayer7", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 8, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer7", {
 	type = "badp",
 	hp_min = 37,
@@ -363,7 +363,7 @@ bp:register_mob("badplayer:badplayer7", {
 	drawtype = "front",
 	water_damage = 0,
 	lava_damage = 5,
-	light_damage = 0,
+	light_damage = 1,
 	on_rightclick = nil,
 	attack_type = "dogfight",
 	animation = {
@@ -432,7 +432,7 @@ bp:register_mob("badplayer:badplayer8", {
 		punch_end = 191,
 	}
 })
-bp:register_spawn("badplayer:badplayer9", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
+bp:register_spawn("badplayer:badplayer9", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 8, -1, 9000, 1, 31000)
 bp:register_mob("badplayer:badplayer9", {
 	type = "badp",
 	hp_min = 37,
@@ -469,7 +469,7 @@ bp:register_mob("badplayer:badplayer9", {
 	drawtype = "front",
 	water_damage = 0,
 	lava_damage = 5,
-	light_damage = 0,
+	light_damage = 1,
 	on_rightclick = nil,
 	attack_type = "dogfight",
 	animation = {
@@ -485,7 +485,7 @@ bp:register_mob("badplayer:badplayer9", {
 		punch_end = 191,
 	}
 })
-bp:register_spawn("badplayer:badplayer10", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
+bp:register_spawn("badplayer:badplayer10", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 3, -1, 12000, 1, 300)
 bp:register_mob("badplayer:badplayer10", {
 	type = "badp",
 	hp_min = 157,
@@ -522,7 +522,7 @@ bp:register_mob("badplayer:badplayer10", {
 	drawtype = "front",
 	water_damage = 0,
 	lava_damage = 5,
-	light_damage = 0,
+	light_damage = 5,
 	on_rightclick = nil,
 	attack_type = "dogfight",
 	animation = {
@@ -646,7 +646,7 @@ bp:register_mob("badplayer:badplayer12", {
 })
 bp:register_spawn("badplayer:badplayer13", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer13", {
-	type = "badp",
+	type = "npc",
 	hp_min = 3,
 	hp_max = 5,
 	collisionbox = {-0.3, -1.0, -0.3, 0.3, 0.8, 0.3},
@@ -658,10 +658,10 @@ bp:register_mob("badplayer:badplayer13", {
 			},
 	visual_size = {x=1, y=1},
 	makes_footstep_sound = true,
-	view_range = 75,
+	view_range = 19,
 	walk_velocity = 1.6,
-	run_velocity = 2.5,
-	damage = 3,
+	run_velocity = 1,
+	damage = 0.5,
 	drops = {
 		{name = "default:leaves",
 		chance = 1,
@@ -677,7 +677,7 @@ bp:register_mob("badplayer:badplayer13", {
 			max=30,
 		},
 	},
-	armor = 30,
+	armor = 10,
 	drawtype = "front",
 	water_damage = 0,
 	lava_damage = 5,
@@ -693,8 +693,8 @@ bp:register_mob("badplayer:badplayer13", {
 		walk_end = 187,
 		run_start = 168,
 		run_end = 187,
-		punch_start = 189,
-		punch_end = 191,
+		punch_start = 0,
+		punch_end = 0,
 	}
 })
 bp:register_spawn("badplayer:badplayer14", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
@@ -1411,7 +1411,7 @@ bp:register_mob("badplayer:badplayer26", {
 		punch_end = 191,
 	}
 })
-bp:register_spawn("badplayer:badplayer27", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
+bp:register_spawn("badplayer:badplayer27", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 3, -1, 13000, 1, 31000)
 bp:register_mob("badplayer:badplayer27", {
 	type = "badp",
 	hp_min = 79,
@@ -1448,7 +1448,7 @@ bp:register_mob("badplayer:badplayer27", {
 	drawtype = "front",
 	water_damage = 0,
 	lava_damage = 5,
-	light_damage = 0,
+	light_damage = 2,
 	on_rightclick = nil,
 	attack_type = "dogfight",
 	animation = {
@@ -1570,7 +1570,7 @@ bp:register_mob("badplayer:badplayer29", {
 		punch_end = 191,
 	}
 })
-bp:register_spawn("badplayer:badplayer30", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
+bp:register_spawn("badplayer:badplayer30", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 10, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer30", {
 	type = "badp",
 	hp_min = 47,
@@ -1607,7 +1607,7 @@ bp:register_mob("badplayer:badplayer30", {
 	drawtype = "front",
 	water_damage = 0,
 	lava_damage = 5,
-	light_damage = 0,
+	light_damage = 2,
 	on_rightclick = nil,
 	attack_type = "dogfight",
 	animation = {
