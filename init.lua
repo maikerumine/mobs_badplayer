@@ -1,7 +1,8 @@
 dofile(minetest.get_modpath("badplayer").."/api.lua")
 
 bp:register_mob("badplayer:badplayer1", {
-	type = "npc",		
+	type = "npc",
+	hp_min = 5,		
 	hp_max = 15,
 	collisionbox = {-0.3, -1.0, -0.3, 0.3, 0.8, 0.3},
 	visual = "mesh",
@@ -12,7 +13,7 @@ bp:register_mob("badplayer:badplayer1", {
 			},
 	visual_size = {x=1, y=1},
 	makes_footstep_sound = true,
-	view_range = 65,
+	view_range = 15,
 	walk_velocity = 1,
 	run_velocity = 3,
 	damage = 2,
@@ -59,6 +60,7 @@ bp:register_spawn("badplayer:badplayer2", {"default:dirt_with_grass","default:st
 
 bp:register_mob("badplayer:badplayer2", {
 	type = "badp",
+	hp_min = 5,
 	hp_max = 15,
 	collisionbox = {-0.3, -1.0, -0.3, 0.3, 0.8, 0.3},
 	visual = "mesh",
@@ -111,6 +113,7 @@ bp:register_mob("badplayer:badplayer2", {
 bp:register_spawn("badplayer:badplayer3", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer3", {
 	type = "badp",
+	hp_min = 19,
 	hp_max = 63,
 	collisionbox = {-0.3, -1.0, -0.3, 0.3, 0.8, 0.3},
 	visual = "mesh",
@@ -134,7 +137,7 @@ bp:register_mob("badplayer:badplayer3", {
 		chance = 1,
 		min = 1,
 		max = 1,},
-		{name = "default:stick",
+		{name = "default_apple",
 			chance = 1,
 			min = 13,
 			max=30,
@@ -163,6 +166,7 @@ bp:register_mob("badplayer:badplayer3", {
 bp:register_spawn("badplayer:badplayer4", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer4", {
 	type = "badp",
+	hp_min = 7,
 	hp_max = 32,
 	collisionbox = {-0.3, -1.0, -0.3, 0.3, 0.8, 0.3},
 	visual = "mesh",
@@ -179,17 +183,17 @@ bp:register_mob("badplayer:badplayer4", {
 	damage = 3,
 	drops = {
 		{name = "default:sword_steel",
-		chance = 1,
+		chance = 2,
 		min =1,
 		max = 1,},
 		{name = "default:pick_steel",
-		chance = 1,
+		chance = 2,
 		min = 1,
 		max = 1,},
-		{name = "default:stick",
+		{name = "default:pick_wood",
 			chance = 2,
 			min = 1,
-			max=10,
+			max=1,
 		},
 	},
 	armor = 100,
@@ -215,6 +219,7 @@ bp:register_mob("badplayer:badplayer4", {
 bp:register_spawn("badplayer:badplayer5", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer5", {
 	type = "npc",
+	hp_min = 7,
 	hp_max = 24,
 	collisionbox = {-0.3, -1.0, -0.3, 0.3, 0.8, 0.3},
 	visual = "mesh",
@@ -271,6 +276,7 @@ bp:register_mob("badplayer:badplayer5", {
 bp:register_spawn("badplayer:badplayer6", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer6", {
 	type = "badp",
+	hp_min = 77,
 	hp_max = 140,
 	collisionbox = {-0.3, -1.0, -0.3, 0.3, 0.8, 0.3},
 	visual = "mesh",
@@ -294,7 +300,7 @@ bp:register_mob("badplayer:badplayer6", {
 		chance = 3,
 		min = 1,
 		max = 1,},
-		{name = "default:stick",
+		{name = "default_apple",
 			chance = 2,
 			min = 13,
 			max=30,
@@ -323,6 +329,7 @@ bp:register_mob("badplayer:badplayer6", {
 bp:register_spawn("badplayer:badplayer7", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer7", {
 	type = "badp",
+	hp_min = 37,
 	hp_max = 70,
 	collisionbox = {-0.3, -1.0, -0.3, 0.3, 0.8, 0.3},
 	visual = "mesh",
@@ -346,7 +353,7 @@ bp:register_mob("badplayer:badplayer7", {
 		chance = 3,
 		min = 1,
 		max = 1,},
-		{name = "default:stick",
+		{name = "default_apple",
 			chance = 1,
 			min = 13,
 			max=20,
@@ -375,6 +382,7 @@ bp:register_mob("badplayer:badplayer7", {
 bp:register_spawn("badplayer:badplayer8", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer8", {
 	type = "badp",
+	hp_min = 27,
 	hp_max = 55,
 	collisionbox = {-0.3, -1.0, -0.3, 0.3, 0.8, 0.3},
 	visual = "mesh",
@@ -398,7 +406,7 @@ bp:register_mob("badplayer:badplayer8", {
 		chance = 1,
 		min = 1,
 		max = 1,},
-		{name = "default:stick",
+		{name = "default:ice",
 			chance = 2,
 			min = 13,
 			max=30,
@@ -427,6 +435,7 @@ bp:register_mob("badplayer:badplayer8", {
 bp:register_spawn("badplayer:badplayer9", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer9", {
 	type = "badp",
+	hp_min = 37,
 	hp_max = 80,
 	collisionbox = {-0.3, -1.0, -0.3, 0.3, 0.8, 0.3},
 	visual = "mesh",
@@ -479,6 +488,7 @@ bp:register_mob("badplayer:badplayer9", {
 bp:register_spawn("badplayer:badplayer10", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer10", {
 	type = "badp",
+	hp_min = 157,
 	hp_max = 200,
 	collisionbox = {-0.3, -1.0, -0.3, 0.3, 0.8, 0.3},
 	visual = "mesh",
@@ -490,7 +500,7 @@ bp:register_mob("badplayer:badplayer10", {
 	visual_size = {x=1, y=1},
 	makes_footstep_sound = true,
 	view_range = 10,
-	walk_velocity = 2,
+	walk_velocity = 4,
 	run_velocity = 30,
 	damage = 4,
 	drops = {
@@ -498,7 +508,7 @@ bp:register_mob("badplayer:badplayer10", {
 		chance = 10,
 		min = 3,
 		max = 5,},
-		{name = "default:sword_steel",
+		{name = "default:sword_diamond",
 		chance = 1,
 		min = 1,
 		max = 1,},
@@ -531,6 +541,7 @@ bp:register_mob("badplayer:badplayer10", {
 bp:register_spawn("badplayer:badplayer11", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer11", {
 	type = "badp",
+	hp_min = 9,
 	hp_max = 25,
 	collisionbox = {-0.3, -1.0, -0.3, 0.3, 0.8, 0.3},
 	visual = "mesh",
@@ -554,7 +565,7 @@ bp:register_mob("badplayer:badplayer11", {
 		chance = 1,
 		min = 1,
 		max = 1,},
-		{name = "default:stick",
+		{name = "default:dirt",
 			chance = 2,
 			min = 13,
 			max=30,
@@ -583,6 +594,7 @@ bp:register_mob("badplayer:badplayer11", {
 bp:register_spawn("badplayer:badplayer12", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer12", {
 	type = "badp",
+	hp_min = 17,
 	hp_max = 35,
 	collisionbox = {-0.3, -1.0, -0.3, 0.3, 0.8, 0.3},
 	visual = "mesh",
@@ -593,7 +605,7 @@ bp:register_mob("badplayer:badplayer12", {
 			},
 	visual_size = {x=1, y=1},
 	makes_footstep_sound = true,
-	view_range = 15,
+	view_range = 25,
 	walk_velocity = 0.3,
 	run_velocity = 1.5,
 	damage = 2,
@@ -635,6 +647,7 @@ bp:register_mob("badplayer:badplayer12", {
 bp:register_spawn("badplayer:badplayer13", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer13", {
 	type = "badp",
+	hp_min = 3,
 	hp_max = 5,
 	collisionbox = {-0.3, -1.0, -0.3, 0.3, 0.8, 0.3},
 	visual = "mesh",
@@ -645,7 +658,7 @@ bp:register_mob("badplayer:badplayer13", {
 			},
 	visual_size = {x=1, y=1},
 	makes_footstep_sound = true,
-	view_range = 15,
+	view_range = 75,
 	walk_velocity = 1.6,
 	run_velocity = 2.5,
 	damage = 3,
@@ -664,7 +677,7 @@ bp:register_mob("badplayer:badplayer13", {
 			max=30,
 		},
 	},
-	armor = 10,
+	armor = 30,
 	drawtype = "front",
 	water_damage = 0,
 	lava_damage = 5,
@@ -687,6 +700,7 @@ bp:register_mob("badplayer:badplayer13", {
 bp:register_spawn("badplayer:badplayer14", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer14", {
 	type = "npc",
+	hp_min = 17,
 	hp_max = 25,
 	collisionbox = {-0.3, -1.0, -0.3, 0.3, 0.8, 0.3},
 	visual = "mesh",
@@ -744,6 +758,7 @@ bp:register_mob("badplayer:badplayer14", {
 bp:register_spawn("badplayer:badplayer15", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer15", {
 	type = "badp",
+	hp_min = 27,
 	hp_max = 55,
 	collisionbox = {-0.3, -1.0, -0.3, 0.3, 0.8, 0.3},
 	visual = "mesh",
@@ -796,6 +811,7 @@ bp:register_mob("badplayer:badplayer15", {
 bp:register_spawn("badplayer:badplayer16", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer16", {
 	type = "badp",
+	hp_min = 7,
 	hp_max = 15,
 	collisionbox = {-0.3, -1.0, -0.3, 0.3, 0.8, 0.3},
 	visual = "mesh",
@@ -848,6 +864,7 @@ bp:register_mob("badplayer:badplayer16", {
 bp:register_spawn("badplayer:badplayer17", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer17", {
 	type = "npc",
+	hp_min = 17,
 	hp_max = 35,
 	collisionbox = {-0.3, -1.0, -0.3, 0.3, 0.8, 0.3},
 	visual = "mesh",
@@ -905,6 +922,7 @@ bp:register_mob("badplayer:badplayer17", {
 bp:register_spawn("badplayer:badplayer18", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer18", {
 	type = "badp",
+	hp_min = 8,
 	hp_max = 17,
 	collisionbox = {-0.3, -1.0, -0.3, 0.3, 0.8, 0.3},
 	visual = "mesh",
@@ -957,6 +975,7 @@ bp:register_mob("badplayer:badplayer18", {
 bp:register_spawn("badplayer:badplayer19", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer19", {
 	type = "npc",
+	hp_min = 8,
 	hp_max = 25,
 	collisionbox = {-0.3, -1.0, -0.3, 0.3, 0.8, 0.3},
 	visual = "mesh",
@@ -1014,6 +1033,7 @@ bp:register_mob("badplayer:badplayer19", {
 bp:register_spawn("badplayer:badplayer20", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer20", {
 	type = "npc",
+	hp_min = 12,
 	hp_max = 25,
 	collisionbox = {-0.3, -1.0, -0.3, 0.3, 0.8, 0.3},
 	visual = "mesh",
@@ -1071,6 +1091,7 @@ bp:register_mob("badplayer:badplayer20", {
 bp:register_spawn("badplayer:badplayer21", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer21", {
 	type = "badp",
+	hp_min = 27,
 	hp_max = 50,
 	collisionbox = {-0.3, -1.0, -0.3, 0.3, 0.8, 0.3},
 	visual = "mesh",
@@ -1094,10 +1115,10 @@ bp:register_mob("badplayer:badplayer21", {
 		chance = 1,
 		min = 1,
 		max = 1,},
-		{name = "default:stick",
-			chance = 2,
-			min = 1,
-			max=3,
+		{name = "default_apple",
+			chance = 1,
+			min = 10,
+			max=36,
 		},
 	},
 	armor = 80,
@@ -1123,6 +1144,7 @@ bp:register_mob("badplayer:badplayer21", {
 bp:register_spawn("badplayer:badplayer22", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer22", {
 	type = "npc",
+	hp_min = 37,
 	hp_max = 50,
 	collisionbox = {-0.3, -1.0, -0.3, 0.3, 0.8, 0.3},
 	visual = "mesh",
@@ -1180,6 +1202,7 @@ bp:register_mob("badplayer:badplayer22", {
 bp:register_spawn("badplayer:badplayer23", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer23", {
 	type = "badp",
+	hp_min = 27,
 	hp_max = 52,
 	collisionbox = {-0.3, -1.0, -0.3, 0.3, 0.8, 0.3},
 	visual = "mesh",
@@ -1232,6 +1255,7 @@ bp:register_mob("badplayer:badplayer23", {
 bp:register_spawn("badplayer:badplayer24", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer24", {
 	type = "badp",
+	hp_min = 37,
 	hp_max = 59,
 	collisionbox = {-0.3, -1.0, -0.3, 0.3, 0.8, 0.3},
 	visual = "mesh",
@@ -1284,6 +1308,7 @@ bp:register_mob("badplayer:badplayer24", {
 bp:register_spawn("badplayer:badplayer25", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer25", {
 	type = "badp",
+	hp_min = 47,
 	hp_max = 90,
 	collisionbox = {-0.3, -1.0, -0.3, 0.3, 0.8, 0.3},
 	visual = "mesh",
@@ -1307,10 +1332,10 @@ bp:register_mob("badplayer:badplayer25", {
 		chance = 1,
 		min = 1,
 		max = 1,},
-		{name = "default:stick",
+		{name = "default_apple",
 			chance = 2,
-			min = 1,
-			max=3,
+			min = 31,
+			max=53,
 		},
 	},
 	armor = 65,
@@ -1336,6 +1361,7 @@ bp:register_mob("badplayer:badplayer25", {
 bp:register_spawn("badplayer:badplayer26", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer26", {
 	type = "badp",
+	hp_min = 7,
 	hp_max = 20,
 	collisionbox = {-0.3, -1.0, -0.3, 0.3, 0.8, 0.3},
 	visual = "mesh",
@@ -1388,6 +1414,7 @@ bp:register_mob("badplayer:badplayer26", {
 bp:register_spawn("badplayer:badplayer27", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer27", {
 	type = "badp",
+	hp_min = 79,
 	hp_max = 140,
 	collisionbox = {-0.3, -1.0, -0.3, 0.3, 0.8, 0.3},
 	visual = "mesh",
@@ -1407,10 +1434,10 @@ bp:register_mob("badplayer:badplayer27", {
 		chance = 2,
 		min = 1,
 		max = 1,},
-		{name = "default:sword_steel",
-		chance = 5,
-		min = 1,
-		max = 1,},
+		{name = "default:default_apple",
+		chance = 1,
+		min = 16,
+		max = 71,},
 		{name = "default:stick",
 			chance = 1,
 			min = 1,
@@ -1440,6 +1467,7 @@ bp:register_mob("badplayer:badplayer27", {
 bp:register_spawn("badplayer:badplayer28", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer28", {
 	type = "badp",
+	hp_min = 27,
 	hp_max = 40,
 	collisionbox = {-0.3, -1.0, -0.3, 0.3, 0.8, 0.3},
 	visual = "mesh",
@@ -1463,10 +1491,10 @@ bp:register_mob("badplayer:badplayer28", {
 		chance = 1,
 		min = 1,
 		max = 1,},
-		{name = "default:stick",
+		{name = "default_apple",
 			chance = 2,
-			min = 1,
-			max=3,
+			min = 10,
+			max=30,
 		},
 	},
 	armor = 75,
@@ -1492,6 +1520,7 @@ bp:register_mob("badplayer:badplayer28", {
 bp:register_spawn("badplayer:badplayer29", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer29", {
 	type = "badp",
+	hp_min = 9,
 	hp_max = 19,
 	collisionbox = {-0.3, -1.0, -0.3, 0.3, 0.8, 0.3},
 	visual = "mesh",
@@ -1544,6 +1573,7 @@ bp:register_mob("badplayer:badplayer29", {
 bp:register_spawn("badplayer:badplayer30", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer30", {
 	type = "badp",
+	hp_min = 47,
 	hp_max = 90,
 	collisionbox = {-0.3, -1.0, -0.3, 0.3, 0.8, 0.3},
 	visual = "mesh",
