@@ -426,7 +426,8 @@ function bp:register_mob(name, def)
 								break
 						end
 					end
-				end
+			end
+			local yaw = 0
 				if lp ~= nil then
 					local vec = {x=lp.x-s.x, y=lp.y-s.y, z=lp.z-s.z}
 					yaw = math.atan(vec.z/vec.x)+math.pi/2
