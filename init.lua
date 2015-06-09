@@ -1,17 +1,18 @@
 dofile(minetest.get_modpath("badplayer").."/api.lua")
 
+bp:register_spawn("badplayer:badplayer1", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer1", {
 	type = "npc",
 	hp_min = 5,		
 	hp_max = 15,
-	collisionbox = {-0.3, -1.0, -0.3, 0.3, 0.8, 0.3},
+	collisionbox = {-0.3, -1.3, -0.3, 0.3, 0.8, 0.3},
 	visual = "mesh",
 	mesh = "3d_armor_character.x",
 	textures = {"badplayer1.png",
 			"3d_armor_trans.png",
 				minetest.registered_items["default:sword_steel"].inventory_image,
 			},
-	visual_size = {x=1, y=1},
+	visual_size = {x=1, y=1.3},
 	makes_footstep_sound = true,
 	view_range = 15,
 	walk_velocity = 1,
@@ -24,7 +25,7 @@ bp:register_mob("badplayer:badplayer1", {
 		max = 28,},
 		{name = "default:sword_steel",
 		chance = 2,
-		min = 1,
+		min = 0,
 		max = 1,},
 		{name = "default:stick",
 			chance = 2,
@@ -51,13 +52,17 @@ bp:register_mob("badplayer:badplayer1", {
 		punch_start = 189,
 		punch_end = 191,
 	},
+	sounds = {
+		war_cry = "mobs_die_yell",
+		death = "mobs_death1",
+		attack = "default_punch",
+		},
 	attacks_monsters = true,
 	peaceful = true,
 	group_attack = true,
 	step = 1,
 })
-bp:register_spawn("badplayer:badplayer2", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
-
+bp:register_spawn("badplayer:badplayer2", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 8, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer2", {
 	type = "badp",
 	hp_min = 5,
@@ -82,7 +87,7 @@ bp:register_mob("badplayer:badplayer2", {
 		max = 23,},
 		{name = "default:sword_steel",
 		chance = 2,
-		min = 1,
+		min = 0,
 		max = 1,},
 		{name = "default:stick",
 			chance = 2,
@@ -108,21 +113,26 @@ bp:register_mob("badplayer:badplayer2", {
 		run_end = 187,
 		punch_start = 189,
 		punch_end = 191,
-	}
+	},
+	sounds = {
+		war_cry = "mobs_barbarian_yell1",
+		death = "mobs_barbarian_death",
+		attack = "default_punch2",
+		},
 })
-bp:register_spawn("badplayer:badplayer3", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
+bp:register_spawn("badplayer:badplayer3", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 8, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer3", {
 	type = "badp",
 	hp_min = 19,
 	hp_max = 63,
-	collisionbox = {-0.3, -1.0, -0.3, 0.3, 0.8, 0.3},
+	collisionbox = {-0.3, -0.6, -0.3, 0.3, 0.8, 0.3},
 	visual = "mesh",
 	mesh = "3d_armor_character.x",
 	textures = {"badplayer3.png",
 			"3d_armor_trans.png",
 				minetest.registered_items["default:sword_steel"].inventory_image,
 			},
-	visual_size = {x=1, y=1},
+	visual_size = {x=1.2, y=.6},
 	makes_footstep_sound = true,
 	view_range = 15,
 	walk_velocity = 1,
@@ -131,11 +141,11 @@ bp:register_mob("badplayer:badplayer3", {
 	drops = {
 		{name = "default:stone_with_mese",
 		chance = 7,
-		min = 3,
+		min = 0,
 		max = 5,},
 		{name = "default:sword_steel",
 		chance = 1,
-		min = 1,
+		min = 0,
 		max = 1,},
 		{name = "default_apple",
 			chance = 1,
@@ -161,34 +171,39 @@ bp:register_mob("badplayer:badplayer3", {
 		run_end = 187,
 		punch_start = 189,
 		punch_end = 191,
-	}
+	},
+	sounds = {
+		war_cry = "mobs_barbarian_yell2",
+		death = "mobs_howl",
+		attack = "default_punch3",
+		},
 })
-bp:register_spawn("badplayer:badplayer4", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
+bp:register_spawn("badplayer:badplayer4", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 8, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer4", {
 	type = "badp",
 	hp_min = 7,
 	hp_max = 32,
-	collisionbox = {-0.3, -1.0, -0.3, 0.3, 0.8, 0.3},
+	collisionbox = {-0.3, -1.3, -0.3, 0.3, 0.8, 0.3},
 	visual = "mesh",
 	mesh = "3d_armor_character.x",
 	textures = {"badplayer4.png",
 			"3d_armor_trans.png",
 				minetest.registered_items["default:pick_steel"].inventory_image,
 			},
-	visual_size = {x=1, y=1},
+	visual_size = {x=1.2, y=1.3},
 	makes_footstep_sound = true,
-	view_range = 15,
+	view_range = 19,
 	walk_velocity = 1,
 	run_velocity = 3,
 	damage = 3,
 	drops = {
 		{name = "default:sword_steel",
 		chance = 2,
-		min =1,
+		min =0,
 		max = 1,},
 		{name = "default:pick_steel",
 		chance = 2,
-		min = 1,
+		min = 0,
 		max = 1,},
 		{name = "default:pick_wood",
 			chance = 2,
@@ -214,7 +229,12 @@ bp:register_mob("badplayer:badplayer4", {
 		run_end = 187,
 		punch_start = 189,
 		punch_end = 191,
-	}
+	},
+	sounds = {
+		war_cry = "mobs_barbarian_yell1",
+		death = "mobs_barbarian_death",
+		attack = "default_punch",
+		},
 })
 bp:register_spawn("badplayer:badplayer5", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer5", {
@@ -241,7 +261,7 @@ bp:register_mob("badplayer:badplayer5", {
 		max = 50,},
 		{name = "default:sword_wood",
 		chance = 1,
-		min = 1,
+		min = 0,
 		max = 1,},
 		{name = "default:stick",
 			chance = 2,
@@ -268,6 +288,11 @@ bp:register_mob("badplayer:badplayer5", {
 		punch_start = 189,
 		punch_end = 191,
 	},
+	sounds = {
+		war_cry = "mobs_die_yell",
+		death = "mobs_death2",
+		attack = "default_punch2",
+		},
 	attacks_monsters = true,
 	peaceful = true,
 	group_attack = true,
@@ -278,27 +303,27 @@ bp:register_mob("badplayer:badplayer6", {
 	type = "badp",
 	hp_min = 77,
 	hp_max = 140,
-	collisionbox = {-0.3, -1.0, -0.3, 0.3, 0.8, 0.3},
+	collisionbox = {-0.3, -0.8, -0.3, 0.3, 0.8, 0.3},
 	visual = "mesh",
 	mesh = "3d_armor_character.x",
 	textures = {"badplayer6.png",
 			"3d_armor_trans.png",
 				minetest.registered_items["default:sword_mese"].inventory_image,
 			},
-	visual_size = {x=1, y=1},
+	visual_size = {x=.9, y=.8},
 	makes_footstep_sound = true,
-	view_range = 3,
+	view_range = 20,
 	walk_velocity = 3,
 	run_velocity = 4,
 	damage = 3,
 	drops = {
 		{name = "default:sword_mese",
-		chance = 1,
-		min = 1,
+		chance = 3,
+		min = 0,
 		max = 1,},
 		{name = "default:sword_steel",
 		chance = 3,
-		min = 1,
+		min = 0,
 		max = 1,},
 		{name = "default_apple",
 			chance = 2,
@@ -324,7 +349,12 @@ bp:register_mob("badplayer:badplayer6", {
 		run_end = 187,
 		punch_start = 189,
 		punch_end = 191,
-	}
+	},
+	sounds = {
+		war_cry = "mobs_barbarian_yell1",
+		death = "mobs_barbarian_death",
+		attack = "default_punch3",
+		},
 })
 bp:register_spawn("badplayer:badplayer7", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 8, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer7", {
@@ -346,12 +376,12 @@ bp:register_mob("badplayer:badplayer7", {
 	damage = 3,
 	drops = {
 		{name = "default:sword_bronze",
-		chance = 1,
-		min = 1,
+		chance = 2,
+		min = 0,
 		max = 1,},
 		{name = "default:sword_steel",
 		chance = 3,
-		min = 1,
+		min = 0,
 		max = 1,},
 		{name = "default_apple",
 			chance = 1,
@@ -377,21 +407,26 @@ bp:register_mob("badplayer:badplayer7", {
 		run_end = 187,
 		punch_start = 189,
 		punch_end = 191,
-	}
+	},
+	sounds = {
+		war_cry = "mobs_barbarian_yell2",
+		death = "mobs_yeti_death",
+		attack = "mobs_oerkki_attack",
+		},
 })
-bp:register_spawn("badplayer:badplayer8", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
+bp:register_spawn("badplayer:badplayer8", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 8, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer8", {
 	type = "badp",
 	hp_min = 27,
 	hp_max = 55,
-	collisionbox = {-0.3, -1.0, -0.3, 0.3, 0.8, 0.3},
+	collisionbox = {-0.3, -0.8, -0.3, 0.3, 0.8, 0.3},
 	visual = "mesh",
 	mesh = "3d_armor_character.x",
 	textures = {"badplayer8.png",
 				"3d_armor_trans.png",
 				minetest.registered_items["default:sword_steel"].inventory_image,
 			},
-	visual_size = {x=1, y=1},
+	visual_size = {x=0.6, y=0.8},
 	makes_footstep_sound = true,
 	view_range = 15,
 	walk_velocity = 1,
@@ -403,8 +438,8 @@ bp:register_mob("badplayer:badplayer8", {
 		min = 3,
 		max = 33,},
 		{name = "default:sword_steel",
-		chance = 1,
-		min = 1,
+		chance = 2,
+		min = 0,
 		max = 1,},
 		{name = "default:ice",
 			chance = 2,
@@ -430,21 +465,26 @@ bp:register_mob("badplayer:badplayer8", {
 		run_end = 187,
 		punch_start = 189,
 		punch_end = 191,
-	}
+	},
+	sounds = {
+		war_cry = "mobs_barbarian_yell1",
+		death = "mobs_barbarian_death",
+		attack = "default_punch2",
+		},
 })
 bp:register_spawn("badplayer:badplayer9", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 8, -1, 9000, 1, 31000)
 bp:register_mob("badplayer:badplayer9", {
 	type = "badp",
 	hp_min = 37,
 	hp_max = 80,
-	collisionbox = {-0.3, -1.0, -0.3, 0.3, 0.8, 0.3},
+	collisionbox = {-0.3, -0.8, -0.3, 0.3, 0.8, 0.3},
 	visual = "mesh",
 	mesh = "3d_armor_character.x",
 	textures = {"badplayer9.png",
 			"3d_armor_trans.png",
 				minetest.registered_items["default:sword_bronze"].inventory_image,
 			},
-	visual_size = {x=1, y=1},
+	visual_size = {x=.9, y=.8},
 	makes_footstep_sound = true,
 	view_range = 15,
 	walk_velocity = 1,
@@ -452,12 +492,12 @@ bp:register_mob("badplayer:badplayer9", {
 	damage = 2,
 	drops = {
 		{name = "default:sword_bronze",
-		chance = 1,
-		min = 3,
-		max = 5,},
+		chance = 2,
+		min = 0,
+		max = 1,},
 		{name = "default:sword_steel",
 		chance = 1,
-		min = 1,
+		min = 0,
 		max = 1,},
 		{name = "default:apple",
 			chance = 1,
@@ -483,39 +523,44 @@ bp:register_mob("badplayer:badplayer9", {
 		run_end = 187,
 		punch_start = 189,
 		punch_end = 191,
-	}
+	},
+	sounds = {
+		war_cry = "mobs_barbarian_yell1",
+		death = "mobs_barbarian_death",
+		attack = "default_punch3",
+		},
 })
 bp:register_spawn("badplayer:badplayer10", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 3, -1, 12000, 1, 300)
 bp:register_mob("badplayer:badplayer10", {
 	type = "badp",
 	hp_min = 157,
 	hp_max = 200,
-	collisionbox = {-0.3, -1.0, -0.3, 0.3, 0.8, 0.3},
+	collisionbox = {-0.3, -1.5, -0.3, 0.3, 0.8, 0.3},
 	visual = "mesh",
 	mesh = "3d_armor_character.x",
 	textures = {"badplayer10.png",
 			"3d_armor_trans.png",
 				minetest.registered_items["default:sword_mese"].inventory_image,
 			},
-	visual_size = {x=1, y=1},
+	visual_size = {x=1.3, y=1.5},
 	makes_footstep_sound = true,
 	view_range = 10,
 	walk_velocity = 4,
-	run_velocity = 30,
+	run_velocity =15,
 	damage = 4,
 	drops = {
-		{name = "default:nyancat",
-		chance = 10,
+		{name = "default:cotton",
+		chance = 1,
 		min = 3,
 		max = 5,},
 		{name = "default:sword_diamond",
-		chance = 1,
-		min = 1,
+		chance = 3,
+		min = 0,
 		max = 1,},
 		{name = "default:sword_mese",
 			chance = 2,
-			min = 13,
-			max=30,
+			min = 0,
+			max=1,
 		},
 	},
 	armor = 70,
@@ -536,21 +581,26 @@ bp:register_mob("badplayer:badplayer10", {
 		run_end = 187,
 		punch_start = 189,
 		punch_end = 191,
-	}
+	},
+	sounds = {
+		war_cry = "mobs_barbarian_yell1",
+		death = "mobs_fireball",
+		attack = "mobs_slash_attack",
+		},
 })
-bp:register_spawn("badplayer:badplayer11", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
+bp:register_spawn("badplayer:badplayer11", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 8, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer11", {
 	type = "badp",
 	hp_min = 9,
 	hp_max = 25,
-	collisionbox = {-0.3, -1.0, -0.3, 0.3, 0.8, 0.3},
+	collisionbox = {-0.3, -1.3, -0.3, 0.3, 0.8, 0.3},
 	visual = "mesh",
 	mesh = "3d_armor_character.x",
 	textures = {"badplayer11.png",
 			"3d_armor_trans.png",
 				minetest.registered_items["default:sword_steel"].inventory_image,
 			},
-	visual_size = {x=1, y=1},
+	visual_size = {x=1, y=1.3},
 	makes_footstep_sound = true,
 	view_range = 15,
 	walk_velocity = 1,
@@ -563,7 +613,7 @@ bp:register_mob("badplayer:badplayer11", {
 		max = 5,},
 		{name = "default:sword_steel",
 		chance = 1,
-		min = 1,
+		min = 0,
 		max = 1,},
 		{name = "default:dirt",
 			chance = 2,
@@ -589,21 +639,26 @@ bp:register_mob("badplayer:badplayer11", {
 		run_end = 187,
 		punch_start = 189,
 		punch_end = 191,
-	}
+	},
+	sounds = {
+		war_cry = "mobs_barbarian_yell1",
+		death = "mobs_barbarian_death",
+		attack = "default_punch2",
+		},
 })
-bp:register_spawn("badplayer:badplayer12", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
+bp:register_spawn("badplayer:badplayer12", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 8, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer12", {
 	type = "badp",
 	hp_min = 17,
 	hp_max = 35,
-	collisionbox = {-0.3, -1.0, -0.3, 0.3, 0.8, 0.3},
+	collisionbox = {-0.3, -0.5, -0.3, 0.3, 0.8, 0.3},
 	visual = "mesh",
 	mesh = "3d_armor_character.x",
 	textures = {"badplayer12.png",
 			"3d_armor_trans.png",
 				minetest.registered_items["default:sword_wood"].inventory_image,
 			},
-	visual_size = {x=1, y=1},
+	visual_size = {x=1, y=.5},
 	makes_footstep_sound = true,
 	view_range = 25,
 	walk_velocity = 0.3,
@@ -642,21 +697,26 @@ bp:register_mob("badplayer:badplayer12", {
 		run_end = 187,
 		punch_start = 189,
 		punch_end = 191,
-	}
+	},
+	sounds = {
+		war_cry = "mobs_barbarian_yell1",
+		death = "mobs_barbarian_death",
+		attack = "default_punch3",
+		},
 })
 bp:register_spawn("badplayer:badplayer13", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer13", {
 	type = "npc",
 	hp_min = 3,
 	hp_max = 5,
-	collisionbox = {-0.3, -1.0, -0.3, 0.3, 0.8, 0.3},
+	collisionbox = {-0.3, -0.8, -0.3, 0.3, 0.8, 0.3},
 	visual = "mesh",
 	mesh = "3d_armor_character.x",
 	textures = {"badplayer13.png",
 			"3d_armor_trans.png",
 				minetest.registered_items["default:stick"].inventory_image,
 			},
-	visual_size = {x=1, y=1},
+	visual_size = {x=1, y=.8},
 	makes_footstep_sound = true,
 	view_range = 19,
 	walk_velocity = 1.6,
@@ -668,8 +728,8 @@ bp:register_mob("badplayer:badplayer13", {
 		min = 3,
 		max = 5,},
 		{name = "default:sword_steel",
-		chance = 1,
-		min = 1,
+		chance = 2,
+		min = 0,
 		max = 1,},
 		{name = "default:stick",
 			chance = 2,
@@ -683,6 +743,7 @@ bp:register_mob("badplayer:badplayer13", {
 	lava_damage = 5,
 	light_damage = 0,
 	on_rightclick = nil,
+
 	attack_type = "dogfight",
 	animation = {
 		speed_normal = 17,
@@ -695,7 +756,15 @@ bp:register_mob("badplayer:badplayer13", {
 		run_end = 187,
 		punch_start = 0,
 		punch_end = 0,
-	}
+	},
+	sounds = {
+		war_cry = "mobs_oerkki_attack",
+		death = "mobs_death1",
+		attack = "default_punch",
+		},
+
+	
+	
 })
 bp:register_spawn("badplayer:badplayer14", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer14", {
@@ -721,8 +790,8 @@ bp:register_mob("badplayer:badplayer14", {
 		min = 3,
 		max = 5,},
 		{name = "default:sword_steel",
-		chance = 10,
-		min = 1,
+		chance = 2,
+		min = 0,
 		max = 1,},
 		{name = "default:stick",
 			chance = 2,
@@ -748,16 +817,21 @@ bp:register_mob("badplayer:badplayer14", {
 		run_end = 187,
 		punch_start = 189,
 		punch_end = 191,
-},
+	},
+	sounds = {
+		war_cry = "mobs_barbarian_yell1",
+		death = "mobs_death1",
+		attack = "default_punch2",
+		},
 	attacks_monsters = true,
 	peaceful = true,
 	group_attack = true,
 	step = 1,
 
 })
-bp:register_spawn("badplayer:badplayer15", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
+bp:register_spawn("badplayer:badplayer15", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 12, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer15", {
-	type = "badp",
+	type = "npc",
 	hp_min = 27,
 	hp_max = 55,
 	collisionbox = {-0.3, -1.0, -0.3, 0.3, 0.8, 0.3},
@@ -775,12 +849,12 @@ bp:register_mob("badplayer:badplayer15", {
 	damage = 3,
 	drops = {
 		{name = "default:sword_mese",
-		chance = 1,
-		min = 1,
+		chance = 2,
+		min = 0,
 		max = 1,},
 		{name = "default:sword_steel",
-		chance = 4,
-		min = 1,
+		chance = 1,
+		min = 0,
 		max = 1,},
 		{name = "default:apple",
 			chance = 2,
@@ -806,9 +880,14 @@ bp:register_mob("badplayer:badplayer15", {
 		run_end = 187,
 		punch_start = 189,
 		punch_end = 191,
-	}
+	},
+	sounds = {
+		war_cry = "mobs_die_yell",
+		death = "mobs_death2",
+		attack = "default_punch3",
+		},
 })
-bp:register_spawn("badplayer:badplayer16", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
+bp:register_spawn("badplayer:badplayer16", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 8, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer16", {
 	type = "badp",
 	hp_min = 7,
@@ -829,8 +908,8 @@ bp:register_mob("badplayer:badplayer16", {
 	drops = {
 		{name = "default:pick_wood",
 		chance = 1,
-		min = 3,
-		max = 5,},
+		min = 0,
+		max = 1,},
 		{name = "default:sword_wood",
 		chance = 1,
 		min = 1,
@@ -859,7 +938,12 @@ bp:register_mob("badplayer:badplayer16", {
 		run_end = 187,
 		punch_start = 189,
 		punch_end = 191,
-	}
+	},
+	sounds = {
+		war_cry = "mobs_barbarian_yell1",
+		death = "mobs_barbarian_death",
+		attack = "default_punch",
+		},
 })
 bp:register_spawn("badplayer:badplayer17", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer17", {
@@ -912,14 +996,19 @@ bp:register_mob("badplayer:badplayer17", {
 		run_end = 187,
 		punch_start = 189,
 		punch_end = 191,
-},
+	},
+	sounds = {
+		war_cry = "mobs_die_yell",
+		death = "mobs_death1",
+		attack = "default_punch2",
+		},
 	attacks_monsters = true,
 	peaceful = true,
 	group_attack = true,
 	step = 1,
 
 })
-bp:register_spawn("badplayer:badplayer18", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
+bp:register_spawn("badplayer:badplayer18", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 8, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer18", {
 	type = "badp",
 	hp_min = 8,
@@ -944,7 +1033,7 @@ bp:register_mob("badplayer:badplayer18", {
 		max = 3,},
 		{name = "default:sword_stone",
 		chance = 1,
-		min = 1,
+		min = 0,
 		max = 1,},
 		{name = "default:stick",
 			chance = 2,
@@ -970,9 +1059,14 @@ bp:register_mob("badplayer:badplayer18", {
 		run_end = 187,
 		punch_start = 189,
 		punch_end = 191,
-	}
+		},
+	sounds = {
+		war_cry = "mobs_eerie",
+		death = "mobs_yeti_death",
+		attack = "default_punch3",
+		},
 })
-bp:register_spawn("badplayer:badplayer19", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
+bp:register_spawn("badplayer:badplayer19", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 19, -1, 6000, 1, 31000)
 bp:register_mob("badplayer:badplayer19", {
 	type = "npc",
 	hp_min = 8,
@@ -997,7 +1091,7 @@ bp:register_mob("badplayer:badplayer19", {
 		max = 50,},
 		{name = "default:sword_steel",
 		chance = 1,
-		min = 1,
+		min = 0,
 		max = 1,},
 		{name = "default:stick",
 			chance = 2,
@@ -1023,7 +1117,12 @@ bp:register_mob("badplayer:badplayer19", {
 		run_end = 187,
 		punch_start = 189,
 		punch_end = 191,
-},
+	},
+	sounds = {
+		war_cry = "mobs_fireball",
+		death = "mobs_slash_attack",
+		attack = "default_punch",
+		},
 	attacks_monsters = true,
 	peaceful = true,
 	group_attack = true,
@@ -1051,11 +1150,11 @@ bp:register_mob("badplayer:badplayer20", {
 	drops = {
 		{name = "default:pick_steel",
 		chance = 1,
-		min = 1,
+		min = 0,
 		max = 2,},
 		{name = "default:sword_steel",
-		chance = 1,
-		min = 1,
+		chance = 2,
+		min = 0,
 		max = 1,},
 		{name = "default:stick",
 			chance = 2,
@@ -1081,14 +1180,19 @@ bp:register_mob("badplayer:badplayer20", {
 		run_end = 187,
 		punch_start = 189,
 		punch_end = 191,
-},
+	},
+	sounds = {
+		war_cry = "mobs_stone",
+		death = "mobs_slash_attack",
+		attack = "default_punch2",
+		},
 	attacks_monsters = true,
 	peaceful = true,
 	group_attack = true,
 	step = 1,
 
 })
-bp:register_spawn("badplayer:badplayer21", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
+bp:register_spawn("badplayer:badplayer21", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 8, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer21", {
 	type = "badp",
 	hp_min = 27,
@@ -1109,11 +1213,11 @@ bp:register_mob("badplayer:badplayer21", {
 	drops = {
 		{name = "default:pick_mese",
 		chance = 2,
-		min = 1,
+		min = 0,
 		max = 1,},
 		{name = "default:sword_steel",
 		chance = 1,
-		min = 1,
+		min = 0,
 		max = 1,},
 		{name = "default_apple",
 			chance = 1,
@@ -1139,9 +1243,14 @@ bp:register_mob("badplayer:badplayer21", {
 		run_end = 187,
 		punch_start = 189,
 		punch_end = 191,
-	}
+	},
+	sounds = {
+		war_cry = "mobs_barbarian_yell1",
+		death = "mobs_barbarian_death",
+		attack = "default_punch3",
+		},
 })
-bp:register_spawn("badplayer:badplayer22", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
+bp:register_spawn("badplayer:badplayer22", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 20, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer22", {
 	type = "npc",
 	hp_min = 37,
@@ -1166,10 +1275,10 @@ bp:register_mob("badplayer:badplayer22", {
 		max = 1,},
 		{name = "default:sword_steel",
 		chance = 1,
-		min = 1,
+		min = 0,
 		max = 1,},
 		{name = "default:default_brick",
-			chance = 2,
+			chance = 1,
 			min = 13,
 			max=30,
 		},
@@ -1192,14 +1301,19 @@ bp:register_mob("badplayer:badplayer22", {
 		run_end = 187,
 		punch_start = 189,
 		punch_end = 191,
-},
+	},
+	sounds = {
+		war_cry = "mobs_die_yell",
+		death = "mobs_death2",
+		attack = "default_punch",
+		},
 	attacks_monsters = true,
 	peaceful = true,
 	group_attack = true,
 	step = 1,
 
 })
-bp:register_spawn("badplayer:badplayer23", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
+bp:register_spawn("badplayer:badplayer23", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 8, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer23", {
 	type = "badp",
 	hp_min = 27,
@@ -1220,11 +1334,11 @@ bp:register_mob("badplayer:badplayer23", {
 	drops = {
 		{name = "default:steelblock",
 		chance = 3,
-		min = 1,
+		min = 0,
 		max = 4,},
 		{name = "default:sword_steel",
 		chance = 1,
-		min = 1,
+		min = 0,
 		max = 1,},
 		{name = "default:stick",
 			chance = 2,
@@ -1250,9 +1364,14 @@ bp:register_mob("badplayer:badplayer23", {
 		run_end = 187,
 		punch_start = 189,
 		punch_end = 191,
-	}
+	},
+	sounds = {
+		war_cry = "mobs_barbarian_yell1",
+		death = "mobs_barbarian_death",
+		attack = "default_punch2",
+		},
 })
-bp:register_spawn("badplayer:badplayer24", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
+bp:register_spawn("badplayer:badplayer24", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 5, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer24", {
 	type = "badp",
 	hp_min = 37,
@@ -1277,11 +1396,11 @@ bp:register_mob("badplayer:badplayer24", {
 		max = 1,},
 		{name = "default:sword_steel",
 		chance = 1,
-		min = 1,
+		min = 0,
 		max = 1,},
 		{name = "default:stick",
 			chance = 2,
-			min = 1,
+			min = 0,
 			max=3,
 		},
 	},
@@ -1303,9 +1422,14 @@ bp:register_mob("badplayer:badplayer24", {
 		run_end = 187,
 		punch_start = 189,
 		punch_end = 191,
-	}
+	},
+	sounds = {
+		war_cry = "mobs_barbarian_yell2",
+		death = "mobs_barbarian_death",
+		attack = "default_punch3",
+		},
 })
-bp:register_spawn("badplayer:badplayer25", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
+bp:register_spawn("badplayer:badplayer25", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 7, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer25", {
 	type = "badp",
 	hp_min = 47,
@@ -1326,11 +1450,11 @@ bp:register_mob("badplayer:badplayer25", {
 	drops = {
 		{name = "default:pick_diamond",
 		chance = 2,
-		min = 1,
+		min = 0,
 		max = 1,},
 		{name = "default:sword_steel",
 		chance = 1,
-		min = 1,
+		min = 0,
 		max = 1,},
 		{name = "default_apple",
 			chance = 2,
@@ -1356,9 +1480,14 @@ bp:register_mob("badplayer:badplayer25", {
 		run_end = 187,
 		punch_start = 189,
 		punch_end = 191,
-	}
+	},
+	sounds = {
+		war_cry = "mobs_barbarian_yell1",
+		death = "mobs_barbarian_death",
+		attack = "default_punch",
+		},
 })
-bp:register_spawn("badplayer:badplayer26", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
+bp:register_spawn("badplayer:badplayer26", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 8, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer26", {
 	type = "badp",
 	hp_min = 7,
@@ -1379,11 +1508,11 @@ bp:register_mob("badplayer:badplayer26", {
 	drops = {
 		{name = "default:axe_steel",
 		chance = 1,
-		min = 1,
+		min = 0,
 		max = 2,},
 		{name = "default:sword_steel",
 		chance = 1,
-		min = 1,
+		min = 0,
 		max = 1,},
 		{name = "default:stick",
 			chance = 2,
@@ -1409,9 +1538,14 @@ bp:register_mob("badplayer:badplayer26", {
 		run_end = 187,
 		punch_start = 189,
 		punch_end = 191,
-	}
+	},
+	sounds = {
+		war_cry = "mobs_barbarian_yell1",
+		death = "mobs_barbarian_death",
+		attack = "default_punch2",
+		},
 })
-bp:register_spawn("badplayer:badplayer27", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 3, -1, 13000, 1, 31000)
+bp:register_spawn("badplayer:badplayer27", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 7, -1, 13000, 1, 31000)
 bp:register_mob("badplayer:badplayer27", {
 	type = "badp",
 	hp_min = 79,
@@ -1432,7 +1566,7 @@ bp:register_mob("badplayer:badplayer27", {
 	drops = {
 		{name = "default:sword_diamond",
 		chance = 2,
-		min = 1,
+		min = 0,
 		max = 1,},
 		{name = "default:default_apple",
 		chance = 1,
@@ -1462,9 +1596,14 @@ bp:register_mob("badplayer:badplayer27", {
 		run_end = 187,
 		punch_start = 189,
 		punch_end = 191,
-	}
+	},
+	sounds = {
+		war_cry = "mobs_barbarian_yell2",
+		death = "mobs_barbarian_death",
+		attack = "default_punch3",
+		},
 })
-bp:register_spawn("badplayer:badplayer28", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
+bp:register_spawn("badplayer:badplayer28", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 3, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer28", {
 	type = "badp",
 	hp_min = 27,
@@ -1484,12 +1623,12 @@ bp:register_mob("badplayer:badplayer28", {
 	damage = 2,
 	drops = {
 		{name = "default:obsidian",
-		chance = 1,
-		min = 3,
+		chance = 2,
+		min = 0,
 		max = 5,},
 		{name = "default:sword_steel",
 		chance = 1,
-		min = 1,
+		min = 0,
 		max = 1,},
 		{name = "default_apple",
 			chance = 2,
@@ -1515,9 +1654,14 @@ bp:register_mob("badplayer:badplayer28", {
 		run_end = 187,
 		punch_start = 189,
 		punch_end = 191,
-	}
+	},
+	sounds = {
+		war_cry = "mobs_barbarian_yell1",
+		death = "mobs_barbarian_death",
+		attack = "default_punch",
+		},
 })
-bp:register_spawn("badplayer:badplayer29", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 18, -1, 7000, 1, 31000)
+bp:register_spawn("badplayer:badplayer29", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 8, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer29", {
 	type = "badp",
 	hp_min = 9,
@@ -1538,11 +1682,11 @@ bp:register_mob("badplayer:badplayer29", {
 	drops = {
 		{name = "default:sword_stone",
 		chance = 1,
-		min = 1,
+		min = 0,
 		max = 2,},
 		{name = "default:pick_stone",
 		chance = 1,
-		min = 1,
+		min = 0,
 		max = 1,},
 		{name = "default:default_apple",
 			chance = 2,
@@ -1568,9 +1712,14 @@ bp:register_mob("badplayer:badplayer29", {
 		run_end = 187,
 		punch_start = 189,
 		punch_end = 191,
-	}
+	},
+	sounds = {
+		war_cry = "mobs_eerie",
+		death = "mobs_yeti_death",
+		attack = "default_punch2",
+		},
 })
-bp:register_spawn("badplayer:badplayer30", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 10, -1, 7000, 1, 31000)
+bp:register_spawn("badplayer:badplayer30", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 6, -1, 7000, 1, 31000)
 bp:register_mob("badplayer:badplayer30", {
 	type = "badp",
 	hp_min = 47,
@@ -1591,11 +1740,11 @@ bp:register_mob("badplayer:badplayer30", {
 	drops = {
 		{name = "default:diamondblock",
 		chance = 10,
-		min = 1,
+		min = 0,
 		max = 3,},
 		{name = "default:sword_mese",
-		chance = 1,
-		min = 1,
+		chance = 2,
+		min = 0,
 		max = 1,},
 		{name = "default:default_apple",
 			chance = 2,
@@ -1621,7 +1770,12 @@ bp:register_mob("badplayer:badplayer30", {
 		run_end = 187,
 		punch_start = 189,
 		punch_end = 191,
-	}
+	},
+	sounds = {
+		war_cry = "mobs_barbarian_yell2",
+		death = "mobs_howl",
+		attack = "default_punch3",
+		},
 })
 
 if minetest.setting_get("log_mods") then

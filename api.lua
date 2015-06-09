@@ -4,7 +4,7 @@ function bp:register_mob(name, def)
 	minetest.register_entity(name, {
 			name = name,
 			hp_min = def.hp_min or 9,
-			hp_max = def.hp_max,
+			hp_max = def.hp_max or 80,
 			physical = true,
 			collisionbox = def.collisionbox,
 			visual = def.visual,
@@ -38,7 +38,7 @@ function bp:register_mob(name, def)
 			recovery_time = def.recovery_time or 0.5,
 			knock_back = def.knock_back or 3,
 			blood_offset = def.blood_offset or 0,
-			blood_amount = def.blood_amount or 5, -- 15
+			blood_amount = def.blood_amount or 9, -- 15
 			blood_texture = def.blood_texture or "mobs_blood.png",
 			rewards = def.rewards or nil,
 			shoot_offset = def.shoot_offset or 0,
@@ -58,11 +58,11 @@ function bp:register_mob(name, def)
 				if self.state ~= "attack" then
 
 		--SOUND  ATTACK
-				-- if self.sounds.war_cry then
-					-- if math.random(0,100) < 90 then
-						-- minetest.sound_play(self.sounds.war_cry,{ object = self.object })
-					-- end
-				-- end
+				 if self.sounds.war_cry then
+					 if math.random(0,100) < 90 then
+						 minetest.sound_play(self.sounds.war_cry,{ object = self.object })
+					 end
+				 end
 
 				self.state = "attack"
 				self.attack.player = player
@@ -666,11 +666,11 @@ function bp:register_mob(name, def)
 				end
 
 				--SOUND
-				-- if self.sounds.death ~= nil then
-				-- minetest.sound_play(self.sounds.death,{
-				-- object = self.object,
-				-- })
-				-- end
+				 if self.sounds.death ~= nil then
+				 minetest.sound_play(self.sounds.death,{
+				 object = self.object,
+				 })
+				 end
 
 		end
 	end
@@ -719,18 +719,7 @@ function bp:register_mob(name, def)
 			self.do_attack(self,hitter,1)
 		end
 
---[[  I DON'T KNOW WHY I HAVE DUPLICATE CODE-WILL TEST BOTH
-	-- alert other NPCs to the attack
-	local inradius = minetest.get_objects_inside_radius(hitter:getpos(),5)
-		for _, oir in pairs(inradius) do
-			local obj = oir:get_luaentity()
-			if obj then
-				if obj.group_attack == true and obj.state ~= "attack" then
-					obj.do_attack(obj,hitter,1)
-				end
-			end
-		end
-		]]
+
 	end
 	
 
@@ -831,14 +820,14 @@ function bp:register_spawn(name, nodes, max_light, min_light, chance, active_obj
 				end
 
 	--SOUND
-	-- if weapon:get_definition().sounds ~= nil then
-		-- local s = math.random(0,#weapon:get_definition().sounds)
-		-- minetest.sound_play(weapon:get_definition().sounds[s], {
-			-- object=player,
-		-- })
-	-- else
-		-- minetest.sound_play("default_sword_wood", {
-			-- object = player,
-		-- })
-	-- end
+	 if weapon:get_definition().sounds ~= nil then
+		 local s = math.random(0,#weapon:get_definition().sounds)
+		 minetest.sound_play(weapon:get_definition().sounds[s], {
+			 object=player,
+		 })
+	 else
+		 minetest.sound_play("default_sword_wood", {
+			 object = player,
+		 })
+	 end
 end
