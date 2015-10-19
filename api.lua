@@ -3,7 +3,7 @@ bp = {}
 bp.mod = "redo"
 
 -- Do mobs spawn in protected areas (0=yes, 1=no)
-bp.protected = 0
+bp.protected = 1
 
 -- Initial settings check
 local damage_enabled = minetest.setting_getbool("enable_damage")
@@ -20,7 +20,7 @@ on_die = def.on_die,
 jump_height = def.jump_height or 6,
 jump_chance = def.jump_chance or 0,
 rotate = def.rotate or 0, -- 0=front, 1.5=side, 3.0=back, 4.5=side2
-lifetimer = def.lifetimer or 60,
+lifetimer = def.lifetimer or 180,
 		hp_min = def.hp_min or 9,
 		hp_max = def.hp_max or 90,
 		physical = true,
