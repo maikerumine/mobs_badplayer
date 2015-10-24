@@ -295,7 +295,7 @@ bp:register_mob("badplayer:badplayer5", {
 	group_attack = true,
 	step = 1,
 })
-bp:register_spawn("badplayer:badplayer6", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 9, -1, 11000, 1, -1000)
+bp:register_spawn("badplayer:badplayer6", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 9, -1, 11000, 1, -10)
 bp:register_mob("badplayer:badplayer6", {
 	type = "monster",
 	hp_min = 130,
@@ -409,7 +409,7 @@ bp:register_mob("badplayer:badplayer7", {
 		attack = "mobs_oerkki_attack",
 		},
 })
-bp:register_spawn("badplayer:badplayer8", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 9, -1, 11000, 1, -2500)
+bp:register_spawn("badplayer:badplayer8", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 9, -1, 11000, 1, -20)
 bp:register_mob("badplayer:badplayer8", {
 	type = "monster",
 	hp_min = 157,
@@ -466,7 +466,7 @@ bp:register_mob("badplayer:badplayer8", {
 		attack = "default_punch2",
 		},
 })
-bp:register_spawn("badplayer:badplayer9", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 4, -1, 11000, 1, -3000)
+bp:register_spawn("badplayer:badplayer9", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 4, -1, 11000, 1, -30)
 bp:register_mob("badplayer:badplayer9", {
 	type = "monster",
 	hp_min = 177,
@@ -523,7 +523,7 @@ bp:register_mob("badplayer:badplayer9", {
 		attack = "default_punch3",
 		},
 })
-bp:register_spawn("badplayer:badplayer10", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 4, -1, 11000, 1, -4300)
+bp:register_spawn("badplayer:badplayer10", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 4, -1, 11000, 1, -40)
 bp:register_mob("badplayer:badplayer10", {
 	type = "monster",
 	hp_min = 157,
@@ -580,7 +580,7 @@ bp:register_mob("badplayer:badplayer10", {
 		attack = "mobs_slash_attack",
 		},
 })
-bp:register_spawn("badplayer:badplayer11", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 9, -1, 11000, 1, 100)
+bp:register_spawn("badplayer:badplayer11", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 9, -1, 11000, 1, -100)
 bp:register_mob("badplayer:badplayer11", {
 	type = "monster",
 	hp_min = 49,
@@ -1128,7 +1128,7 @@ bp:register_mob("badplayer:badplayer19", {
 	step = 1,
 
 })
-bp:register_spawn("badplayer:badplayer20", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 20, 10, 11000, 1, -1000)
+bp:register_spawn("badplayer:badplayer20", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 20, 10, 11000, 1, -10)
 bp:register_mob("badplayer:badplayer20", {
 	type = "npc",
 	hp_min = 92,
@@ -1190,7 +1190,7 @@ bp:register_mob("badplayer:badplayer20", {
 	step = 1,
 
 })
-bp:register_spawn("badplayer:badplayer21", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 5, -1, 11000, 1, -5000)
+bp:register_spawn("badplayer:badplayer21", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 5, -1, 11000, 1, -50)
 bp:register_mob("badplayer:badplayer21", {
 	type = "monster",
 	hp_min = 157,
@@ -1309,7 +1309,7 @@ bp:register_mob("badplayer:badplayer22", {
 	step = 1,
 
 })
-bp:register_spawn("badplayer:badplayer23", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 5, -1, 11000, 1, -1500)
+bp:register_spawn("badplayer:badplayer23", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 5, -1, 11000, 1, -100)
 bp:register_mob("badplayer:badplayer23", {
 	type = "monster",
 	hp_min = 127,
@@ -1366,7 +1366,7 @@ bp:register_mob("badplayer:badplayer23", {
 		attack = "default_punch2",
 		},
 })
-bp:register_spawn("badplayer:badplayer24", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 5, -1, 11000, 1, -4000)
+bp:register_spawn("badplayer:badplayer24", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 5, -1, 11000, 1, -40)
 bp:register_mob("badplayer:badplayer24", {
 	type = "monster",
 	hp_min = 137,
@@ -1651,7 +1651,7 @@ bp:register_mob("badplayer:badplayer28", {
 		attack = "default_punch",
 		},
 })
-bp:register_spawn("badplayer:badplayer29", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 5, -1, 11000, 1, -500)
+bp:register_spawn("badplayer:badplayer29", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 5, -1, 11000, 1, -50)
 bp:register_mob("badplayer:badplayer29", {
 	type = "monster",
 	hp_min = 69,
@@ -1824,7 +1824,7 @@ bp:register_mob("badplayer:badplayer31", {
 		},
 })
 
-bp:register_spawn("badplayer:badplayer32", {"default:obsidian","es:infiniumblock","es:stone_with_infinium"}, 14, -1, 7000, 2, -5000)
+bp:register_spawn("badplayer:badplayer32", {"default:obsidian","es:infiniumblock","es:stone_with_infinium"}, 14, -1, 7000, 2, -50)
 bp:register_mob("badplayer:badplayer32", {
 	type = "monster",
 	hp_min = 177,
@@ -2333,8 +2333,8 @@ bp:register_mob("badplayer:stone_monster", {
 		chance = 2, min = 3, max = 5,},
 		{name = "default:iron_lump",
 		chance=5, min=1, max=2,},
-		{name = "default:coal_lump",
-		chance=3, min=1, max=3,},
+		{name = "bones:bones",
+		chance=1, min=1, max=1,},
 	},
 	water_damage = 0,
 	lava_damage = 1,
@@ -2348,7 +2348,7 @@ bp:register_mob("badplayer:stone_monster", {
 	},
 })
 
-bp:register_spawn("badplayer:stone_monster", {"default:stone"}, 5, 0, 7000, 3, -4000)
+bp:register_spawn("badplayer:stone_monster", {"default:stone"}, 5, 0, 7000, 30, 3100)
 
 --bp:register_egg("badplayer:stone_monster", "Stone Monster", "default_stone.png", 1)
 

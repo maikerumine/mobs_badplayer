@@ -1,7 +1,7 @@
 
 Bad Player MOD by Maikerumine
 
-Adds 30 "players" to your world that all have unique attributes, strengths, and rewards.  Quite fun!
+Adds 35 "players" to your world that all have unique attributes, strengths, and rewards.  Quite fun!
 Added weapons in hand so you can see your potential reward, as well as random items that might help you fight better. 
 There are some easy going NPC that will not attack you unless they are attacked.  They help iwith fighting monsters.
 
