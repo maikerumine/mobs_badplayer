@@ -1,8 +1,11 @@
 
 Bad Player MOD by Maikerumine
 
-Adds 35 "players" to your world that all have unique attributes, strengths, and rewards.  Quite fun!
-Added weapons in hand so you can see your potential reward, as well as random items that might help you fight better. 
+THIS MOD IS CANCELED FROM FURTHER DEVELOPMENT, ALL FURTHER UPDATES WILL BE IN ESMOBS
+20151028
+
+Adds 32 "players" to your world that all have unique attributes, strengths, and rewards.  Quite fun!
+Added weapons in hand so you can see your potential reward, as well as random items that might help you fight better.
 There are some easy going NPC that will not attack you unless they are attacked.  They help iwith fighting monsters.
 
 Borrowed simpleskins for textures and the player model for player object.
@@ -22,7 +25,7 @@ Used a modified version of Mobs Redo code both api and init files, the mobs now 
             DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
    TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
 
-  0. You just DO WHAT THE FUCK YOU WANT TO. 
+  0. You just DO WHAT THE FUCK YOU WANT TO.
 
 ======================================
 
@@ -117,4 +120,4 @@ http://minetest.net/
             DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
    TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
 
-  0. You just DO WHAT THE FUCK YOU WANT TO. 
+  0. You just DO WHAT THE FUCK YOU WANT TO.

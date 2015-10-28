@@ -1,5 +1,9 @@
 --function bp:spawn_specific(name, nodes, neighbors, min_light, max_light, interval, chance, active_object_count, min_height, max_height)
 
+--DELETED ALL OTHER MOBS TO KEEP THIS ONLY BADPLAYER CHARACTERS.  ALSO DELETED ALL NEW SKIN PLAYER TYPES
+--PLEASE SEE ESMOBS FOR FURTHER UPDATES ON THIS MOD
+
+
 dofile(minetest.get_modpath("badplayer").."/api.lua")
 
 bp:register_spawn("badplayer:badplayer1", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 20, 10, 11000, 1, 31000)
@@ -63,6 +67,7 @@ bp:register_mob("badplayer:badplayer1", {
 	group_attack = true,
 	step = 1,
 })
+
 bp:register_spawn("badplayer:badplayer2", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 9, -1, 11000, 1, -20)
 bp:register_mob("badplayer:badplayer2", {
 	type = "monster",
@@ -120,6 +125,7 @@ bp:register_mob("badplayer:badplayer2", {
 		attack = "default_punch2",
 		},
 })
+
 bp:register_spawn("badplayer:badplayer3", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 9, -1, 11000, 1, 31000)
 bp:register_mob("badplayer:badplayer3", {
 	type = "monster",
@@ -177,6 +183,7 @@ bp:register_mob("badplayer:badplayer3", {
 		attack = "default_punch3",
 		},
 })
+
 bp:register_spawn("badplayer:badplayer4", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 9, -1, 11000, 1, 31000)
 bp:register_mob("badplayer:badplayer4", {
 	type = "monster",
@@ -234,6 +241,7 @@ bp:register_mob("badplayer:badplayer4", {
 		attack = "default_punch",
 		},
 })
+
 bp:register_spawn("badplayer:badplayer5", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 20, 10, 11000, 1, 31000)
 bp:register_mob("badplayer:badplayer5", {
 	type = "npc",
@@ -295,6 +303,7 @@ bp:register_mob("badplayer:badplayer5", {
 	group_attack = true,
 	step = 1,
 })
+
 bp:register_spawn("badplayer:badplayer6", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 9, -1, 11000, 1, -10)
 bp:register_mob("badplayer:badplayer6", {
 	type = "monster",
@@ -352,6 +361,7 @@ bp:register_mob("badplayer:badplayer6", {
 		attack = "default_punch3",
 		},
 })
+
 bp:register_spawn("badplayer:badplayer7", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 9, -1, 11000, 1, 31000)
 bp:register_mob("badplayer:badplayer7", {
 	type = "monster",
@@ -409,6 +419,7 @@ bp:register_mob("badplayer:badplayer7", {
 		attack = "mobs_oerkki_attack",
 		},
 })
+
 bp:register_spawn("badplayer:badplayer8", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 9, -1, 11000, 1, -20)
 bp:register_mob("badplayer:badplayer8", {
 	type = "monster",
@@ -466,6 +477,7 @@ bp:register_mob("badplayer:badplayer8", {
 		attack = "default_punch2",
 		},
 })
+
 bp:register_spawn("badplayer:badplayer9", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 4, -1, 11000, 1, -30)
 bp:register_mob("badplayer:badplayer9", {
 	type = "monster",
@@ -523,6 +535,7 @@ bp:register_mob("badplayer:badplayer9", {
 		attack = "default_punch3",
 		},
 })
+
 bp:register_spawn("badplayer:badplayer10", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 4, -1, 11000, 1, -40)
 bp:register_mob("badplayer:badplayer10", {
 	type = "monster",
@@ -580,6 +593,7 @@ bp:register_mob("badplayer:badplayer10", {
 		attack = "mobs_slash_attack",
 		},
 })
+
 bp:register_spawn("badplayer:badplayer11", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 9, -1, 11000, 1, -100)
 bp:register_mob("badplayer:badplayer11", {
 	type = "monster",
@@ -637,6 +651,7 @@ bp:register_mob("badplayer:badplayer11", {
 		attack = "default_punch2",
 		},
 })
+
 bp:register_spawn("badplayer:badplayer12", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 9, -1, 11000, 1, 31000)
 bp:register_mob("badplayer:badplayer12", {
 	type = "monster",
@@ -694,6 +709,7 @@ bp:register_mob("badplayer:badplayer12", {
 		attack = "default_punch3",
 		},
 })
+
 bp:register_spawn("badplayer:badplayer13", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 20, 10, 11000, 1, 31000)
 bp:register_mob("badplayer:badplayer13", {
 	type = "npc",
@@ -759,10 +775,6 @@ bp:register_mob("badplayer:badplayer13", {
 	step = 1,
 })
 
---bp:register_egg("badplayer:badplayer13", "Girl In Red", "character_13_preview.png", 1)
-
-
-
 bp:register_spawn("badplayer:badplayer14", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 20, 10, 11000, 1, 31000)
 bp:register_mob("badplayer:badplayer14", {
 	type = "npc",
@@ -825,6 +837,7 @@ bp:register_mob("badplayer:badplayer14", {
 	step = 1,
 
 })
+
 bp:register_spawn("badplayer:badplayer15", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 20, 10, 11000, 1, 31000)
 bp:register_mob("badplayer:badplayer15", {
 	type = "npc",
@@ -886,6 +899,7 @@ bp:register_mob("badplayer:badplayer15", {
 	group_attack = true,
 	step = 1,
 })
+
 bp:register_spawn("badplayer:badplayer16", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 9, -1, 11000, 1, 31000)
 bp:register_mob("badplayer:badplayer16", {
 	type = "monster",
@@ -943,6 +957,7 @@ bp:register_mob("badplayer:badplayer16", {
 		attack = "default_punch",
 		},
 })
+
 bp:register_spawn("badplayer:badplayer17", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 20, 10, 11000, 1, 31000)
 bp:register_mob("badplayer:badplayer17", {
 	type = "npc",
@@ -1009,6 +1024,7 @@ bp:register_mob("badplayer:badplayer17", {
 	step = 1,
 
 })
+
 bp:register_spawn("badplayer:badplayer18", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 9, -1, 11000, 1, 31000)
 bp:register_mob("badplayer:badplayer18", {
 	type = "monster",
@@ -1066,6 +1082,7 @@ bp:register_mob("badplayer:badplayer18", {
 		attack = "default_punch3",
 		},
 })
+
 bp:register_spawn("badplayer:badplayer19", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 20, 10, 11000, 1, 31000)
 bp:register_mob("badplayer:badplayer19", {
 	type = "npc",
@@ -1128,6 +1145,7 @@ bp:register_mob("badplayer:badplayer19", {
 	step = 1,
 
 })
+
 bp:register_spawn("badplayer:badplayer20", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 20, 10, 11000, 1, -10)
 bp:register_mob("badplayer:badplayer20", {
 	type = "npc",
@@ -1190,6 +1208,7 @@ bp:register_mob("badplayer:badplayer20", {
 	step = 1,
 
 })
+
 bp:register_spawn("badplayer:badplayer21", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 5, -1, 11000, 1, -50)
 bp:register_mob("badplayer:badplayer21", {
 	type = "monster",
@@ -1247,6 +1266,7 @@ bp:register_mob("badplayer:badplayer21", {
 		attack = "default_punch3",
 		},
 })
+
 bp:register_spawn("badplayer:badplayer22", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 20, 10, 11000, 1, 31000)
 bp:register_mob("badplayer:badplayer22", {
 	type = "npc",
@@ -1309,6 +1329,7 @@ bp:register_mob("badplayer:badplayer22", {
 	step = 1,
 
 })
+
 bp:register_spawn("badplayer:badplayer23", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 5, -1, 11000, 1, -100)
 bp:register_mob("badplayer:badplayer23", {
 	type = "monster",
@@ -1366,6 +1387,7 @@ bp:register_mob("badplayer:badplayer23", {
 		attack = "default_punch2",
 		},
 })
+
 bp:register_spawn("badplayer:badplayer24", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 5, -1, 11000, 1, -40)
 bp:register_mob("badplayer:badplayer24", {
 	type = "monster",
@@ -1423,6 +1445,7 @@ bp:register_mob("badplayer:badplayer24", {
 		attack = "default_punch3",
 		},
 })
+
 bp:register_spawn("badplayer:badplayer25", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 5, -1, 11000, 1, -120)
 bp:register_mob("badplayer:badplayer25", {
 	type = "monster",
@@ -1480,6 +1503,7 @@ bp:register_mob("badplayer:badplayer25", {
 		attack = "default_punch",
 		},
 })
+
 bp:register_spawn("badplayer:badplayer26", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 5, -1, 11000, 1, 31000)
 bp:register_mob("badplayer:badplayer26", {
 	type = "monster",
@@ -1537,6 +1561,7 @@ bp:register_mob("badplayer:badplayer26", {
 		attack = "default_punch2",
 		},
 })
+
 bp:register_spawn("badplayer:badplayer27", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 5, -1, 11000, 1, 31000)
 bp:register_mob("badplayer:badplayer27", {
 	type = "monster",
@@ -1594,6 +1619,7 @@ bp:register_mob("badplayer:badplayer27", {
 		attack = "default_punch3",
 		},
 })
+
 bp:register_spawn("badplayer:badplayer28", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 5, -1, 11000, 1, 31000)
 bp:register_mob("badplayer:badplayer28", {
 	type = "monster",
@@ -1651,6 +1677,7 @@ bp:register_mob("badplayer:badplayer28", {
 		attack = "default_punch",
 		},
 })
+
 bp:register_spawn("badplayer:badplayer29", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 5, -1, 11000, 1, -50)
 bp:register_mob("badplayer:badplayer29", {
 	type = "monster",
@@ -1708,6 +1735,7 @@ bp:register_mob("badplayer:badplayer29", {
 		attack = "default_punch2",
 		},
 })
+
 bp:register_spawn("badplayer:badplayer30", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 5, -1, 11000, 1, -50)
 bp:register_mob("badplayer:badplayer30", {
 	type = "monster",
@@ -1824,627 +1852,7 @@ bp:register_mob("badplayer:badplayer31", {
 		},
 })
 
-bp:register_spawn("badplayer:badplayer32", {"default:obsidian","es:infiniumblock","es:stone_with_infinium"}, 14, -1, 7000, 2, -50)
-bp:register_mob("badplayer:badplayer32", {
-	type = "monster",
-	hp_min = 177,
-	hp_max = 190,
-	collisionbox = {-0.3, -1.0, -0.3, 0.3, 0.8, 0.3},
-	visual = "mesh",
-	mesh = "3d_armor_character.x",
-	textures = {"badplayer32.png",
-			"3d_armor_trans.png",
-				minetest.registered_items["default:sword_diamond"].inventory_image,
-			},
-	visual_size = {x=1, y=1},
-	makes_footstep_sound = true,
-	view_range = 8,
-	walk_velocity = 5,
-	run_velocity = 3.4,
-	damage = 9,
-	drops = {
-		{name = "es:infinium_goo",
-		chance = 5,
-		min = 0,
-		max = 1,},
-		{name = "default:sword_diamond",
-		chance = 2,
-		min = 1,
-		max = 1,},
-		{name = "default:water_flowing",
-			chance = 2,
-			min = 1,
-			max=2,},
-		{name = "bones:bones",
-			chance = 1,
-			min = 1,
-			max=1,
-		},
-	},
-	armor = 75,
-	drawtype = "front",
-	water_damage = 0,
-	lava_damage = 0,
-	light_damage = 0,
-	on_rightclick = nil,
-	attack_type = "dogfight",
-	animation = {
-		speed_normal = 30,		speed_run = 30,
-		stand_start = 0,		stand_end = 79,
-		walk_start = 168,		walk_end = 187,
-		run_start = 168,		run_end = 187,
-		punch_start = 200,		punch_end = 219,
-	},
-	sounds = {
-		war_cry = "mobs_barbarian_yell2",
-		death = "mobs_howl",
-		attack = "default_punch3",
-		},
-})
-
-
-bp:register_spawn("badplayer:badplayer33", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 20, 10, 11000, 1, 31000)
-bp:register_mob("badplayer:badplayer33", {
-	type = "npc",
-	hp_min = 125,
-	hp_max = 135,
-	collisionbox = {-0.3, -1.0, -0.3, 0.3, 0.8, 0.3},
-	visual = "mesh",
-	mesh = "3d_armor_character.x",
-	textures = {"character_17.png",
-			"3d_armor_trans.png",
-				minetest.registered_items["es:sword_ruby"].inventory_image,
-			},
-	visual_size = {x=1, y=1.0},
-	makes_footstep_sound = true,
-	view_range = 25,
-	walk_velocity = 1.9,
-	run_velocity = 3.9,
-	damage = 5,
-	drops = {
-		{name = "default:apple",
-		chance = 1,
-		min = 1,
-		max = 5,},
-		{name = "es:sword_ruby",
-		chance = 5,
-		min = 0,
-		max = 1,},
-		{name = "default:stick",
-			chance = 2,
-			min = 1,
-			max=4,},
-		{name = "bones:bones",
-			chance = 1,
-			min = 1,
-			max=1,
-		},
-	},
-	armor = 80,
-	drawtype = "front",
-	water_damage = 10,
-	lava_damage = 5,
-	light_damage = 0,
-	on_rightclick = nil,
-	attack_type = "dogfight",
-	animation = {
-		speed_normal = 30,		speed_run = 30,
-		stand_start = 0,		stand_end = 79,
-		walk_start = 168,		walk_end = 187,
-		run_start = 168,		run_end = 187,
-		punch_start = 200,		punch_end = 219,
-	},
-	sounds = {
-		war_cry = "mobs_die_yell",
-		death = "mobs_death1",
-		attack = "default_punch",
-		},
-	attacks_monsters = true,
-	peaceful = true,
-	group_attack = true,
-	step = 1,
-})
-
-bp:register_spawn("badplayer:badplayer34", {"default:dirt_with_grass","default:stone", "default:stonebrick","default:cobble"}, 20, 10, 11000, 1, 31000)
-bp:register_mob("badplayer:badplayer34", {
-	type = "npc",
-	hp_min = 25,
-	hp_max = 35,
-	collisionbox = {-0.3, -1.0, -0.3, 0.3, 0.8, 0.3},
-	visual = "mesh",
-	mesh = "3d_armor_character.x",
-	textures = {"character_2.png",
-			"3d_armor_trans.png",
-				minetest.registered_items["es:infinium_ingot"].inventory_image,
-			},
-	visual_size = {x=1, y=1.0},
-	makes_footstep_sound = true,
-	view_range = 15,
-	walk_velocity = 3,
-	run_velocity = 5,
-	damage = 3,
-	drops = {
-		{name = "default:apple",
-		chance = 1,
-		min = 1,
-		max = 2,},
-		{name = "default:sword_diamond",
-		chance = 3,
-		min = 0,
-		max = 1,},
-		{name = "default:meselamp",
-			chance = 2,
-			min = 1,
-			max=3,},
-		{name = "bones:bones",
-			chance = 1,
-			min = 1,
-			max=1,
-		},
-	},
-	armor = 80,
-	drawtype = "front",
-	water_damage = 10,
-	lava_damage = 5,
-	light_damage = 0,
-	on_rightclick = nil,
-	attack_type = "dogfight",
-	animation = {
-		speed_normal = 30,		speed_run = 30,
-		stand_start = 0,		stand_end = 79,
-		walk_start = 168,		walk_end = 187,
-		run_start = 168,		run_end = 187,
-		punch_start = 200,		punch_end = 219,
-	},
-	sounds = {
-		war_cry = "mobs_die_yell",
-		death = "mobs_death1",
-		attack = "default_punch",
-		},
-	attacks_monsters = true,
-	peaceful = true,
-	group_attack = true,
-	step = 1,
-})
-
-bp:register_spawn("badplayer:badplayer35", {"default:sandstone","default:stone", "default:stonebrick","default:cobble"}, 9, -1, 11000, 1, -20)
-bp:register_mob("badplayer:badplayer35", {
-	type = "monster",
-	hp_min = 35,
-	hp_max = 75,
-	collisionbox = {-0.3, -1.0, -0.3, 0.3, 0.8, 0.3},
-	visual = "mesh",
-	mesh = "3d_armor_character.x",
-	textures = {"character_21.png",
-			"3d_armor_trans.png",
-				minetest.registered_items["default:sword_steel"].inventory_image,
-			},
-	visual_size = {x=1, y=1},
-	makes_footstep_sound = true,
-	view_range = 15,
-	walk_velocity = 1.9,
-	run_velocity = 3.8,
-	damage = 4,
-	drops = {
-		{name = "default:jungletree",
-		chance = 1,
-		min = 0,
-		max = 2,},
-		{name = "default:sword_steel",
-		chance = 2,
-		min = 0,
-		max = 1,},
-		{name = "default:stick",
-			chance = 2,
-			min = 0,
-			max=3,},
-		{name = "bones:bones",
-			chance = 1,
-			min = 1,
-			max=1,
-		},
-	},
-	armor = 80,
-	drawtype = "front",
-	water_damage = 10,
-	lava_damage = 5,
-	light_damage = 110,
-	on_rightclick = nil,
-	attack_type = "dogfight",
-	animation = {
-		speed_normal = 30,		speed_run = 30,
-		stand_start = 0,		stand_end = 79,
-		walk_start = 168,		walk_end = 187,
-		run_start = 168,		run_end = 187,
-		punch_start = 200,		punch_end = 219,
-	},
-	sounds = {
-		war_cry = "mobs_barbarian_yell1",
-		death = "mobs_barbarian_death",
-		attack = "default_punch2",
-		},
-})
-
-
-
-
--- Sheep by PilzAdam
-
-bp:register_mob("badplayer:sheep", {
-	type = "animal",
-	passive = true,
-	hp_min = 12,
-	hp_max = 20,
-	armor = 100,
-	collisionbox = {-0.4, -0.01, -0.4, 0.4, 1, 0.4},
-	visual = "mesh",
-	mesh = "mobs_sheep.x",
-	textures = {
-		{"mobs_sheep.png"},
-	},
-	visual_size = {x=1,y=1},
-	gotten_texture = {"mobs_sheep_shaved.png"},
-	gotten_mesh = "mobs_sheep_shaved.x",
-	makes_footstep_sound = true,
-	sounds = {
-		random = "mobs_sheep",
-	},
-	walk_velocity = 1.7,
-	jump = true,
-	drops = {
-		{name = "badplayer:meat_raw",
-		chance = 1, min = 2, max = 3},
-		{name = "wool:white",
-		chance = 1, min = 1, max = 1},
-	},
-	water_damage = 1,
-	lava_damage = 5,
-	light_damage = 0,
-	animation = {
-		speed_normal = 15,		speed_run = 15,
-		stand_start = 0,		stand_end = 80,
-		walk_start = 81,		walk_end = 100,
-	},
-	follow = "farming:wheat",
-	view_range = 5,
-	replace_rate = 50,
-	replace_what = {"default:grass_3", "default:grass_4", "default:grass_5", "farming:wheat_8"},
-	replace_with = "air",
-	on_rightclick = function(self, clicker)
-		local item = clicker:get_wielded_item()
-		if item:get_name() == "farming:wheat" then
-			if not minetest.setting_getbool("creative_mode") then
-				item:take_item()
-				clicker:set_wielded_item(item)
-			end
-			if self.child == true then
-				self.hornytimer = self.hornytimer + 10
-				return
-			end
-			self.food = (self.food or 0) + 1
-			if self.food >= 8 then
-				self.food = 0
-				if self.hornytimer == 0 then
-					self.horny = true
-				end
-				self.gotten = false -- can be shaved again
-				self.tamed = true
-				self.object:set_properties({
-					textures = {"mobs_sheep.png"},
-					mesh = "mobs_sheep.x",
-				})
-				minetest.sound_play("mobs_sheep", {object = self.object,gain = 1.0,max_hear_distance = 32,loop = false,})
-			end
-			return
-		end
-
-		if item:get_name() == "bp:shears"
-		and self.gotten == false
-		and self.child == false then
-			self.gotten = true -- shaved
-			if minetest.registered_items["wool:white"] then
-				local pos = self.object:getpos()
-				pos.y = pos.y + 0.5
-				local obj = minetest.add_item(pos, ItemStack("wool:white "..math.random(2,3)))
-				if obj then
-					obj:setvelocity({x=math.random(-1,1), y=5, z=math.random(-1,1)})
-				end
-				item:add_wear(650) -- 100 uses
-				clicker:set_wielded_item(item)
-			end
-			self.object:set_properties({
-				textures = {"mobs_sheep_shaved.png"},
-				mesh = "mobs_sheep_shaved.x",
-			})
-		end
-
-		if item:get_name() == "bp:magic_lasso"
-		and clicker:is_player()
-		and clicker:get_inventory()
-		and self.child == false
-		and clicker:get_inventory():room_for_item("main", "badplayer:sheep") then
-			clicker:get_inventory():add_item("main", "badplayer:sheep")
-			self.object:remove()
-			item:add_wear(3000) -- 22 uses
-			print ("wear", item:get_wear())
-			clicker:set_wielded_item(item)
-		end
-	end,
-})
-
-bp:register_spawn("badplayer:sheep", {"default:dirt_with_grass", "ethereal:green_dirt"}, 20, 10, 9000, 2, 31000)
-
---bp:register_egg("badplayer:sheep", "Sheep", "wool_white.png", 1)
-
---[[ shears (right click sheep to shear wool)
-minetest.register_tool("badplayer:shears", {
-	description = "Steel Shears (right-click sheep to shear)",
-	inventory_image = "mobs_shears.png",
-})
-
-minetest.register_craft({
-	output = 'badplayer:shears',
-	recipe = {
-		{'', 'default:steel_ingot', ''},
-		{'', 'group:stick', 'default:steel_ingot'},
-	}
-})]]
-
--- Tree Monster (or Tree Gollum) by PilzAdam
-
-bp:register_mob("badplayer:tree_monster", {
-	type = "monster",
-	passive = false,
-	attack_type = "dogfight",
-	damage = 1,
-	hp_min = 27,
-	hp_max = 53,
-	armor = 100,
-	collisionbox = {-0.4, -0.01, -0.4, 0.4, 1.9, 0.4},
-	visual = "mesh",
-	mesh = "mobs_tree_monster.x",
-	textures = {
-		{"mobs_tree_monster.png"},
-	},
-	visual_size = {x=4.5,y=4.5},
-	blood_texture = "default_wood.png",
-	makes_footstep_sound = true,
-	sounds = {
-		random = "mobs_treemonster",
-	},
-	walk_velocity = 1,
-	run_velocity = 3,
-	jump = true,
-	view_range = 15,
-	drops = {
-		{name = "ethereal:tree_sapling",
-		chance = 3, min = 1, max = 2},
-		{name = "ethereal:jungle_tree_sapling",
-		chance = 3, min = 1, max = 2},
-		{name = "default:apple",
-		chance = 2, min = 1, max=3},
-	},
-	water_damage = 1,
-	lava_damage = 5,
-	light_damage = 2,
-	fall_damage = 0,
-	animation = {
-		speed_normal = 15,		speed_run = 15,
-		stand_start = 0,		stand_end = 24,
-		walk_start = 25,		walk_end = 47,
-		run_start = 48,			run_end = 62,
-		punch_start = 48,		punch_end = 62,
-	},
-})
-
-bp:register_spawn("badplayer:tree_monster", {"default:leaves", "default:jungleleaves","default:dirt", "default:jungletree"}, 5, 0, 13000, 2, 31000)
-
---bp:register_egg("badplayer:tree_monster", "Tree Monster", "default_tree_top.png", 1)
-
--- ethereal sapling compatibility
-if not minetest.get_modpath("ethereal") then
-	minetest.register_alias("ethereal:tree_sapling", "default:sapling")
-	minetest.register_alias("ethereal:jungle_tree_sapling", "default:junglesapling")
-end
-
-
-
-
--- Sand Monster by PilzAdam
-
-bp:register_mob("badplayer:sand_monster", {
-	type = "monster",
-	passive = false,
-	attack_type = "dogfight",
-	damage = 2,
-	hp_min = 7,
-	hp_max = 15,
-	armor = 100,
-	collisionbox = {-0.4, -0.01, -0.4, 0.4, 1.9, 0.4},
-	visual = "mesh",
-	mesh = "mobs_sand_monster.x",
-	textures = {
-		{"mobs_sand_monster.png"},
-	},
-	visual_size = {x=8,y=8},
-	makes_footstep_sound = true,
-	sounds = {
-		random = "mobs_sandmonster",
-	},
-	walk_velocity = 1.5,
-	run_velocity = 4,
-	view_range = 15,
-	jump = true,
-	floats = 0,
-	drops = {
-		{name = "default:desert_sand",
-		chance = 1, min = 3, max = 5,},
-		{name = "bones:bones",
-			chance = 1,
-			min = 1,
-			max=1,
-		},
-	},
-	water_damage = 3,
-	lava_damage = 4,
-	light_damage = 0,
-	animation = {
-		speed_normal = 15,		speed_run = 15,
-		stand_start = 0,		stand_end = 39,
-		walk_start = 41,		walk_end = 72,
-		run_start = 74,			run_end = 105,
-		punch_start = 74,		punch_end = 105,
-	},
-})
-
-bp:register_spawn("badplayer:sand_monster", {"default:sand","default:dirt", "meru:stone","group:crumbly"},20, -1, 7000, 2, 31000)
-
-
-
-
--- Stone Monster by PilzAdam
-
-bp:register_mob("badplayer:stone_monster", {
-	type = "monster",
-	passive = false,
-	attack_type = "dogfight",
-	damage = 8,
-	hp_min = 12,
-	hp_max = 35,
-	armor = 80,
-	collisionbox = {-0.4, -0.01, -0.4, 0.4, 1.9, 0.4},
-	visual = "mesh",
-	mesh = "mobs_stone_monster.x",
-	textures = {
-		{"mobs_stone_monster.png"},
-	},
-	visual_size = {x=3, y=2.6},
-	makes_footstep_sound = true,
-	sounds = {
-		random = "mobs_stonemonster",
-	},
-	walk_velocity = 0.5,
-	run_velocity = 2,
-	jump = true,
-	floats = 0,
-	view_range = 10,
-	drops = {
-		{name = "default:torch",
-		chance = 2, min = 3, max = 5,},
-		{name = "default:iron_lump",
-		chance=5, min=1, max=2,},
-		{name = "bones:bones",
-		chance=1, min=1, max=1,},
-	},
-	water_damage = 0,
-	lava_damage = 1,
-	light_damage = 0,
-	animation = {
-		speed_normal = 15,		speed_run = 15,
-		stand_start = 0,		stand_end = 14,
-		walk_start = 15,		walk_end = 38,
-		run_start = 40,			run_end = 63,
-		punch_start = 40,		punch_end = 63,
-	},
-})
-
-bp:register_spawn("badplayer:stone_monster", {"default:stone"}, 5, 0, 7000, 30, 3100)
-
---bp:register_egg("badplayer:stone_monster", "Stone Monster", "default_stone.png", 1)
-
-
-
-
-
-
-
-
-
--- Spider by AspireMint (fishyWET (CC-BY-SA 3.0 license for texture)
-
-bp:register_mob("badplayer:spider", {
-	type = "monster",
-	passive = false,
-	attack_type = "dogfight",
-	damage = 3,
-	hp_min = 40,
-	hp_max = 80,
-	armor = 100,
-	collisionbox = {-0.9, -0.01, -0.7, 0.7, 0.6, 0.7},
-	visual = "mesh",
-	mesh = "mobs_spider.x",
-	textures = {
-		{"mobs_spider.png"},
-	},
-	visual_size = {x=3,y=3},
-	makes_footstep_sound = false,
-	sounds = {
-		random = "mobs_spider",
-		attack = "mobs_spider",
-	},
-	walk_velocity = 1.7,
-	run_velocity = 3.3,
-	jump = true,
-	view_range = 15,
-	floats = 0,
-    drops = {
-		{name = "farming:string",
-		chance = 1, min = 1, max = 5,},
-		{name = "badplayer:meat_raw",
-		chance = 1, min = 0, max = 1,},
-	},
-	water_damage = 5,
-	lava_damage = 5,
-	light_damage = 0,
-	animation = {
-		speed_normal = 15,		speed_run = 15,
-		stand_start = 1,		stand_end = 1,
-		walk_start = 20,		walk_end = 40,
-		run_start = 20,			run_end = 40,
-		punch_start = 50,		punch_end = 90,
-	},
-})
-
-bp:register_spawn("badplayer:spider", {"default:stone" ,"default:cobble","group:crumbly", "group:cracky", "group:choppy", "group:snappy"}, 6, 0, 13000, 1, 71)
-
---bp:register_egg("badplayer:spider", "Spider", "mobs_cobweb.png", 1)
-
--- ethereal crystal spike compatibility
-if not minetest.get_modpath("ethereal") then
-	minetest.register_alias("ethereal:crystal_spike", "default:sandstone")
-end
-
--- cobweb
-minetest.register_node("badplayer:cobweb", {
-	description = "Cobweb",
-	drawtype = "plantlike",
-	visual_scale = 1.1,
-	tiles = {"mobs_cobweb.png"},
-	inventory_image = "mobs_cobweb.png",
-	paramtype = "light",
-	sunlight_propagates = true,
-	liquid_viscosity = 11,
-	liquidtype = "source",
-	liquid_alternative_flowing = "mobs:cobweb",
-	liquid_alternative_source = "mobs:cobweb",
-	liquid_renewable = false,
-	liquid_range = 0,
-	walkable = false,
-	groups = {snappy=1,liquid=3},
-	drop = "farming:cotton",
-	sounds = default.node_sound_leaves_defaults(),
-})
-
-minetest.register_craft({
-	output = "badplayer:cobweb",
-	recipe = {
-		{"farming:string", "", "farming:string"},
-		{"", "farming:string", ""},
-		{"farming:string", "", "farming:string"},
-	}
-})
-
-
+bp:register_spawn("badplayer:applmons", {"default:stone"}, 6, -1, 17000, 2, -30)
 bp:register_mob("badplayer:applmons", {
 	type = "monster",
 	hp_min = 20,
@@ -2485,38 +1893,6 @@ bp:register_mob("badplayer:applmons", {
 		punch_end = 48,
 	}
 })
-bp:register_spawn("badplayer:applmons", {"default:stone"}, 6, -1, 17000, 2, -30)
-
-
-
-
-
-
---crafts-tenplus1
-
-
--- raw meat
-minetest.register_craftitem("badplayer:meat_raw", {
-	description = "Raw Meat",
-	inventory_image = "mobs_meat_raw.png",
-	on_use = minetest.item_eat(3),
-})
-
--- cooked meat
-minetest.register_craftitem("badplayer:meat", {
-	description = "Meat",
-	inventory_image = "mobs_meat.png",
-	on_use = minetest.item_eat(8),
-})
-
-minetest.register_craft({
-	type = "cooking",
-	output = "badplayer:meat",
-	recipe = "badplayer:meat_raw",
-	cooktime = 5,
-})
-
-
 
 if minetest.setting_get("log_mods") then
 	minetest.log("action", "BadPlayer mobs loaded")
