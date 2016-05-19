@@ -1,12 +1,12 @@
 
-Bad Player MOD by Maikerumine
+Extreme Survival Mobs MOD by Maikerumine, TenPlus1, And RND
 
-THIS MOD IS CANCELED FROM FURTHER DEVELOPMENT, ALL FURTHER UPDATES WILL BE IN ESMOBS
-20151028
-
-Adds 32 "players" to your world that all have unique attributes, strengths, and rewards.  Quite fun!
+Adds 40 "players" and creatures to your world that all have unique attributes, strengths, and rewards.  Quite fun!
 Added weapons in hand so you can see your potential reward, as well as random items that might help you fight better.
-There are some easy going NPC that will not attack you unless they are attacked.  They help iwith fighting monsters.
+There are some easy going NPC that will not attack you unless they are attacked.  They help with fighting monsters.
+Mobs now drop bones like players, you will need to wait to grab your loot!
+
+Good Luck!
 
 Borrowed simpleskins for textures and the player model for player object.
 Used a modified version of Mobs Redo code both api and init files, the mobs now wont get stuck and actually chase you now.
@@ -29,7 +29,11 @@ Used a modified version of Mobs Redo code both api and init files, the mobs now 
 
 ======================================
 
-
+====MINETEST PATHFINDING====
+RND created some clever pathfinding code and forked it in TenPlus1's mobs redo 1.26, which I have merged into ESMOBS.
+https://forum.minetest.net/viewtopic.php?f=9&t=14030
+and GIT:
+https://github.com/ac-minetest/smart_mobs
 
 
 
@@ -75,7 +79,164 @@ Changelog:
 0.1 - Initial Release
 ========================================
 
+===MC-LIKE MOBS===
+Notes
+-----
 
+cows: right-click with empty bucket gets milk
+sheep: right-click gets wool
+chicken: right-click to get an egg
+
+Milk and eggs need a food mod to be installed.
+
+Textures are from Faithful 32x32 pack (http://www.minecraftforum.net/topic/72747-faithful-32x32-pack-updateocelot-two-cats-new-saplings-ctm-17/)
+
+Sounds are from the Minecraft Wiki (Freesound license)
+
+=====Pig=====(at layer 1)
+=====Cow=====(at layer 2)
+=====Sheep=====(at layer 3)
+
+Ver.0.3
+Mesh by Morn76
+Animation by Pavel_S
+
+===Chicken===
+Mesh and animation by Pavel_S
+
+Meshes : Pig, Cow, Sheep
+Armatures : Pig_Rig, Cow_Rig, Sheep_Rig
+
+==Animation==
+Optimized for 24fps.
+(the last frame equal to first in each animation)
+The first frame of each animation is default pose.
+=List of animations :
+	standing (head bobbing slightly up and down) : 1-24
+	walking : 24-50
+	eating (head goes to the ground) : 50-79
+		eating cycle : 58-73
+	look around
+		right : 79-99
+		looking left pose : 89
+		left : 99-119
+		looking right pose : 109
+	hurt (quick half jump with legs slightly crossed) : 119-155
+	death (falls on left side) : 155-180
+
+There is no delays for looking around and repeats for eating!
+
+==Rig==
+See Pig_Rig.png
+
+==ChangeLog==
+0.3
+Added Cow, Sheep
+Added Cow and Sheep animations
+Fixed UVunwraps
+Extended hurt and death animation
+
+0.2
+Added Pig animation
+Fixed UVunwrap
+
+=====Creeper=====
+Ver.0.3
+Mesh by Morn76
+Animation by Pavel_S
+
+Meshes : Creeper
+Armatures : Creeper_Rig
+
+==Animation==
+Optimized for 24fps.
+(the last frame equal to first in each animation)
+The first frame of each animation is default pose.
+=List of animations :
+	standing : 1-25
+	walking : 25-50
+	look around
+		right : 50-80
+		looking left pose : 65
+		left : 80-110
+		looking right pose : 95
+	hurt : 110-140
+	death : 140-190
+
+=====Skeleton=====
+Ver.0.3
+Mesh by Morn76
+Animation by Pavel_S
+
+Meshes : Skeleton
+Armatures : Skeleton_Rig
+
+==Animation==
+Optimized for 30fps.
+(the last frame equal to first in each animation)
+The first frame of each animation is default pose.
+=List of animations :
+	standing (head bobbing slightly up and down) : 1-25
+	walking : 25-50
+	hurt (quick half jump with legs slightly crossed) : 85-117
+	death (falls on left side) : 117-146
+
+=====Zombie=====
+Mesh by Morn76
+Animation by Pavel_S
+
+ 1 - 24   - standing
+24 - 48   - walking
+48 - 64   - running
+64 - 88   - hurm
+88 - 120 - death
+
+*******************************************************************************
+
+Original "simple mobs" README follows
+
+=== MOBS-MOD for MINETEST-C55 ===
+by PilzAdam
+
+Inroduction:
+This mod adds some basic hostile and friendly mobs to the game.
+
+How to install:
+Unzip the archive an place it in minetest-base-directory/mods/minetest/
+if you have a windows client or a linux run-in-place client. If you have
+a linux system-wide instalation place it in ~/.minetest/mods/minetest/.
+If you want to install this mod only in one world create the folder
+worldmods/ in your worlddirectory.
+For further information or help see:
+http://wiki.minetest.com/wiki/Installing_Mods
+
+How to use the mod:
+See https://github.com/PilzAdam/mobs/wiki
+
+For developers:
+The API documentation is moved to https://github.com/PilzAdam/mobs/wiki/API
+
+License:
+Sourcecode: WTFPL (see below)
+Grahpics: WTFPL (see below)
+Models: WTFPL (by Pavel_S, see below)
+
+See also:
+http://minetest.net/
+
+         DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+                    Version 2, December 2004
+
+ Copyright (C) 2004 Sam Hocevar <sam@hocevar.net>
+
+ Everyone is permitted to copy and distribute verbatim or modified
+ copies of this license document, and changing it is allowed as long
+ as the name is changed.
+
+            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+   TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
+
+  0. You just DO WHAT THE FUCK YOU WANT TO.
 
 
 
